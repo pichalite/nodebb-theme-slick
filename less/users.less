@@ -1,0 +1,42 @@
+.users-container {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+    
+    .users-box {
+        display: inline-block;
+        text-align: center;
+		vertical-align: top;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		width: 104px;
+		margin: 10px 0;
+		
+        .user-avatar {
+            .user-avatar(80px);
+        }
+        
+        .user-icon {
+            .user-icon(80px, 4em);
+        }
+        
+        &.anon-user {
+            .user-icon {
+                background: #bbb;
+                color: #fff;
+            }
+        }
+        
+        .user-info {
+            padding-top: 5px;
+            
+            .username {
+                max-width: 94px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                display: inline-block;
+            }
+        }
+    }
+}

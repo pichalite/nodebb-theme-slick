@@ -1,0 +1,197 @@
+.navbar-default {
+    background-color: #fff;
+    border-bottom-color: #fff;
+    transition: all 0.3s ease-in-out;
+    
+    &.scrolled {
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+        
+        #main-nav {
+            .active>a {
+                color: initial;
+                border-bottom: 2px solid @primary-color;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+    
+    .search-menu {
+        #search-button {
+            padding: 10px;
+            margin: 0 5px;
+        }
+        
+        #search-form {
+            padding-left: 0;
+            
+        	#search-button {
+        		float: right;
+        		max-width: 60px;
+        		width: auto;
+        		transition-property: max-width, padding-left, padding-right;
+        		transition-duration: .2s;
+        		transition-timing-function: ease;
+        		overflow: hidden;
+        	}
+        	
+        	#search-button.hidden {
+        		display: inline-block !important;
+        		visibility: visible !important;
+        		max-width: 0;
+        		padding-left: 0;
+        		padding-right: 0;
+        	}
+        	
+        	#search-fields {
+        		width: auto;
+        		max-width: 100%;
+        		overflow: hidden;
+        		transition: max-width 0.2s ease 0s;
+        		max-height: 42px;
+        		float: right;
+        		display: inline-block !important;
+        		visibility: visible !important;
+        
+        		&.hidden {
+        			max-width: 0;
+        		}
+        
+        		.form-group .advanced-search-link {
+        			margin: 0;
+        			width: 0;
+        			position: relative;
+        			left: -30px;
+        		}
+        	}
+        }
+        
+        #search-fields {
+            .form-control {
+                margin: 5px 0;
+            }
+        }
+    }
+    
+    .pagination-block {
+        transition: opacity 250ms ease-in;
+		opacity: 0;
+		pointer-events: none;
+
+		&.ready {
+			opacity: 1;
+			pointer-events: inherit;
+		}
+		
+        .dropdown-toggle {
+            display: inline-block;
+            margin: 0;
+        }
+        
+        .progress-container {
+			height: 2px;
+			position: absolute;
+			bottom: 8px;
+			left: 8px;
+			background: @gray-lighter;
+			width: 90%;
+			margin: auto;
+
+			.progress-bar {
+				background-color: @primary-color;
+				height: 2px;
+			}
+		}
+    }
+    
+    #main-nav {
+        .active>a {
+            color: @primary-color;
+            background: none;
+            
+            &:focus {
+                background: none;
+            }
+        }
+        
+        li>a {
+            border-bottom: 2px solid #fff;
+            
+            &:hover {
+                border-bottom-color: @primary-color;
+            }
+        }
+    }
+    
+    .navbar-nav {
+        >li>a {
+            padding: 20px 10px;
+            margin: 0 5px;
+        }
+    }
+    
+    .navbar-toggle {
+        border: none;
+    }
+}
+
+.navbar-brand {
+	padding: 5px 15px;
+	height: auto;
+	margin-top: 15px;
+}
+
+#user_label {
+    #user_dropdown {
+        padding: 15px 10px;
+    }
+    
+    .user-icon {
+        .user-icon(30px, 1.4em);
+    }
+    
+    .user-avatar {
+        .user-avatar(30px);
+    }
+}
+
+.unread-count:after {
+    content: attr(data-content);
+    position: absolute;
+    left: 18px;
+    top: 13px;
+    font-size: 11px;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    min-width: 16px;
+    border-radius: 3px;
+    background: #D50000;
+    padding: 2px 2px 0 2px;
+    font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header {
+    .navbar-toggle {
+		.notification-icon {
+			position: absolute;
+			left: -13px;
+			top: 14px;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+
+#mobile-menu [component="notifications/icon"].unread-count:after, .slideout-menu .unread-count:after {
+	position: relative;
+	left: -6px;
+	top: -12px;
+	padding: 0 3px;
+}
+
+#mobile-menu [component="notifications/icon"].unread-count:after {
+    top: -6px;
+}

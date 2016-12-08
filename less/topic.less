@@ -1,0 +1,212 @@
+.topic {
+    .post-header {
+        padding-top: 12px;
+        margin-bottom: 24px;
+        
+        .post-time {
+            font-size: 13px;
+            color: #bbb;
+        }
+        
+        .votes {
+            a {
+                padding: 0 10px;
+                color: #777;
+                
+                &.upvoted, &.downvoted, &:hover {
+                    color: @primary-color;
+                }
+            }
+        }
+    }
+    
+    [component="post"] {
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+        
+        &.deleted {
+            .post-content {
+                opacity: .3;
+            }
+        }
+        
+        &.highlight {
+            border-bottom: 1px solid @primary-color;
+        }
+    }
+    
+    .post {
+        .post-author {
+            text-align: center;
+            padding-bottom: 20px;
+            
+            a {
+                display: inline-block;
+            }
+            
+            @media (max-width: @screen-xs-max) {
+                text-align: left;
+            }
+            
+            .user-icon {
+                .user-icon(80px, 4em);
+                
+                @media (max-width: @screen-xs-max) {
+                    margin-right: 10px;
+                    .user-icon(60px, 3em);
+                }
+            }
+            
+            .user-avatar {
+                .user-avatar(80px);
+                
+                @media (max-width: @screen-xs-max) {
+                    margin-right: 10px;
+                    .user-avatar(60px);
+                }
+            }
+        }
+        
+        .author {
+            margin-top: 10px;
+            vertical-align: top;
+            
+            @media (max-width: @screen-xs-max) {
+                display: inline-block;
+                margin-top: 0;
+            }
+            
+            .group-label {
+                padding: 0 4px;
+                border-radius: 2px;
+            }
+        }
+        
+        .post-content {
+            padding-bottom: 15px;
+            
+            h1 {
+                margin-top: 0;
+            }
+        }
+    }
+    
+    .post-footer {
+        .post-tools {
+            a {
+                padding: 0 10px;
+            }
+        }
+        
+        .moderator-tools {
+            padding-right: 10px;
+            padding-left: 10px;
+            
+            >a {
+                color: #333;
+            }
+            
+            .menu-icon {
+                display: inline-block;
+            }
+        }
+    }
+    
+    .quick-reply {
+        margin-top: 20px;
+        
+        .reply-user {
+            text-align: center;
+            
+            a {
+                display: inline-block;
+            
+                .user-avatar {
+                    .user-avatar(80px);
+                }
+                
+                .user-icon {
+                    .user-icon(80px, 4em);
+                }
+            }
+            
+            .author {
+                margin-top: 10px;
+            }
+        }
+        
+        button {
+            float: right;
+            display: block;
+            margin: 10px 15px 10px 0;
+        }
+    }
+    
+    .post-bar {
+        margin: 20px 0 40px;
+        
+        .stats {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        
+        .tags {
+            a {
+                color: #999;
+                padding: 0 5px;
+                border-radius: 4px;
+                border: 1px solid @primary-color;
+                
+                &:hover {
+                    color: @primary-color;
+                }
+                
+                .tag-item {
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+    
+    .pagination-block {
+		position: fixed;
+		width: 100%;
+		background-color: @gray-lighter;
+		bottom: 0px;
+		left: 0px;
+		z-index: 100;
+		transition: opacity 250ms ease-in;
+		opacity: 0;
+
+		&.ready {
+			opacity: 1;
+		}
+
+		.wrapper {
+			padding: 5px 0px 5px 0px;
+		}
+		.progress-bar {
+			background-color: @brand-info;
+			display:block;
+			z-index: -1;
+			position: absolute;
+		}
+	}
+}
+
+.fork-thread-card {
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+}
+
+
+.unread {
+    #category-no-topics {
+        margin-top: 15px;
+    }
+}

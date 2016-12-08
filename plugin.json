@@ -1,0 +1,28 @@
+{
+	"id": "nodebb-theme-slick",
+	"library": "./lib/theme.js",
+	"hooks": [
+		{
+			"hook": "static:app.load", "method": "init"
+		},
+		{
+			"hook": "filter:admin.header.build", "method": "addAdminNavigation"
+		},
+		{
+			"hook": "filter:config.get", "method": "getThemeConfig"
+		},
+		{
+			"hook": "filter:topic.build", "method": "addUserToTopic"
+		}
+	],
+	"scripts": [
+		"lib/slick.js",
+		"lib/modules/slideout.min.js",
+		"lib/chats.js",
+		"lib/quickreply.js"
+	],
+	"acpScripts": [
+		"lib/admin.js"
+	],
+	"templates": "./templates"
+}

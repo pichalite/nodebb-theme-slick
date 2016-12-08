@@ -1,0 +1,165 @@
+.notifications {
+    .notifications-list {
+        [component="notifications/item"] {
+            padding: 10px 0;
+            
+            .notification-image {
+                display: table-cell;
+                padding-right: 15px;
+                
+                .user-avatar {
+                    .user-avatar(35px);
+                }
+                
+                .user-icon {
+                    .user-icon(35px, 1.5em);
+                }
+            }
+            
+            .notification-msg {
+                display: table-cell;
+                vertical-align: top;
+                
+                [component="notifications/item/link"] {
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+                
+                .timeago {
+                    display: block;
+                    padding-top: 5px;
+                    font-size: 85%;
+                    color: #999;
+                }
+            }
+            
+            &:not(.unread) {
+                .notification-msg {
+                    a {
+                        color: #999;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.notifications.dropdown {
+    .dropdown-menu {
+        min-width: 300px;
+        list-style: none;
+        
+        .notification-list {
+            max-height: 250px;
+            overflow: auto;
+            list-style: none;
+            padding-left: 0;
+            
+            li {
+                padding: 5px 10px;
+                margin-bottom: 2px;
+            
+                .notification-image {
+                    display: table-cell;
+                    padding-right: 15px;
+                    
+                    .user-avatar {
+                        .user-avatar(30px);
+                    }
+                    
+                    .user-icon {
+                        .user-icon(30px, 1.3em);
+                    }
+                }
+                
+                .notification-msg {
+                    display: table-cell;
+                    vertical-align: top;
+                    
+                    .relTime {
+                        color: #999;
+                    }
+                    
+                    a {
+                        color: #333;
+                    }
+                }
+                
+                .relTime{
+                    padding-left: 10px;
+                    font-size: 12px;
+                    font-weight: 500;
+                    float: right;
+                }
+                    
+                .mark-read {
+                    float: right;
+                    position: relative;
+                    top: -3px;
+                    padding-left: 5px;
+                    color: #333;
+                    font-size: 14px;
+                    
+                    &:hover {
+                        color: #333;
+                        cursor: pointer;
+                        
+                        &:after {
+                            content: "\f111";
+                        }
+                    }
+                    
+                    &:after {
+                        font-family: "FontAwesome";
+                        content: "\f10c";
+                    }
+                }
+                
+                 &.unread {
+                     background-color: @primary-color;
+                     
+                     .relTime {
+                         color: #fff;
+                     }
+                     
+                    .notification-msg {
+                        a {
+                            color: #fff;
+                        }
+                    }
+                    
+                    .mark-read {
+                        &:hover {
+                            &:after {
+                                content: "\f10c";
+                            }
+                        }
+                        
+                        &:after {
+                            content: "\f111";
+                        }
+                    }
+                }
+                
+                &.no-notifs {
+                    text-align: center;
+                }
+            }
+        }
+        
+        .notif-dropdown-link {
+            text-align: center;
+            
+            a {
+                padding: 5px 0;
+            }
+        }
+        
+        .mark-all-read {
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
+        }
+    }
+}

@@ -1,0 +1,105 @@
+.categories {
+    
+    .categories-header {
+        font-weight: 500;
+        text-align: left;
+        text-transform: uppercase;
+        
+        .header-title {
+            padding-bottom: 20px;
+            margin-top: 10px;
+            border-bottom: 2px solid @primary-color;
+        }
+    }
+    
+    .category-info {
+        padding: 25px 0;
+        margin-right: 20px;
+    
+        @media (max-width: @screen-sm-max) {
+            padding: 20px 0;
+            margin-right: 0;
+        }
+    
+        .category-info-content {
+            
+            .category-icon {
+                float: left;
+                color: @primary-color;
+                font-size: 16px;
+                margin-top: 2px;
+            }
+            
+            .category-title {
+                font-weight: 700;
+                font-size: 20px;
+                color: #333;
+                margin-left: 10px;
+            }
+            
+            .category-description {
+                margin: 5px 0 0 30px;
+            }
+        }
+        
+        .subcategories {
+            margin-left: 27px;
+            
+            .subcategory {
+                display: inline-block;
+                margin: 10px 0;
+                
+                .subcategory-icon {
+                    color: @primary-color;
+                    font-size: 16px;
+                }
+                
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+                
+                .subcategory-title {
+                    color: #333;
+                }
+            }
+        }
+    }
+    
+    .total-topic-count, .total-post-count {
+        padding: 25px 0;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    .teaser {
+        padding: 28px 0 22px;
+        font-size: 13px;
+        font-weight: 500;
+        
+        .user-icon, .user-avatar {
+            float: left;
+            margin-right: 10px;
+        }
+            
+        .user-icon {
+            .user-icon(40px, 1.7em);
+        }
+        
+        .user-avatar {
+            .user-avatar(40px);
+        }
+        
+        a {
+            display: table-row;
+            color: @primary-color;
+            
+            &:hover {
+                text-decoration: none;
+            }
+            
+            &.permalink {
+                color: #999;
+            }
+        }
+    }
+}

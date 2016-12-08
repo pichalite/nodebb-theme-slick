@@ -1,0 +1,177 @@
+.category {
+    .topics-header {
+        padding-top: 15px;
+        margin-bottom: 10px;
+        font-weight: 500;
+        text-align: left;
+        text-transform: uppercase;
+        
+        .header-title {
+            padding-bottom: 20px;
+            margin-top: 10px;
+            border-bottom: 2px solid @primary-color;
+        }
+    }
+    
+    .topic-list {
+        @media (max-width: @screen-xs-max) {
+            margin-top: 15px;
+        }
+    }
+    
+    [component="category/topic"] {
+        padding: 15px 0;
+        
+        .topic-author {
+            display: table-cell;
+            padding-right: 15px;
+    
+            .user-avatar {
+                .user-avatar(45px);
+                
+                @media (max-width: @screen-xs-max) {
+                    .user-avatar(35px);
+                }
+            }
+            
+            .user-icon {
+                .user-icon(45px, 2em);
+                
+                @media (max-width: @screen-xs-max) {
+                    .user-icon(35px, 1.5em);
+                }
+            }
+        }
+        
+        .title {
+            font-weight: 600;
+            font-size: 18px;
+            display: table-cell;
+            vertical-align: top;
+            
+            a {
+                color: #333;
+            }
+            
+            @media (max-width: @screen-sm-max) {
+                font-size: 16px;
+            }
+            
+            small {
+                display: block;
+                font-size: 65%;
+                font-weight: 500;
+                padding-top: 5px;
+                color: #999;
+                
+                a {
+                    color: #999;
+                }
+            }
+        }
+        
+        &.unread {
+            .title {
+                a {
+                    color: @primary-color;
+                }
+                
+                small {
+                     a {
+                        color: #999;
+                    }
+                }
+            }
+        }
+        
+        &.deleted {
+            opacity: .3;
+        }
+        
+        .total-post-count, .total-view-count {
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .teaser {
+            font-size: 12px;
+            font-weight: 500;
+        
+            .user-avatar, .user-icon {
+                float: left;
+                margin-right: 10px;
+            }
+            
+            .user-avatar {
+                .user-avatar(32px);
+            }
+            
+            .user-icon {
+                .user-icon(32px, 1.4em);
+            }
+            
+            a {
+                display: table-row;
+                color: @primary-color;
+                
+                &:hover {
+                    text-decoration: none;
+                }
+                
+                &.permalink {
+                    color: #999;
+                }
+            }
+        }
+    }
+    
+    #category-no-topics {
+        margin-top: 20px;
+    }
+    
+    .subcategory {
+        .category-info {
+            padding: 15px 0;
+            
+            @media (max-width: @screen-sm-max) {
+                padding: 10px 0;
+            }
+            
+            .category-info-content {
+            
+                .category-icon {
+                    font-size: 14px;
+                }
+                
+                .category-title {
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+                
+                .category-description {
+                    font-size: 12px;
+                }
+            }
+        }
+        
+        .total-topic-count, .total-post-count {
+            padding: 15px 0;
+        }
+        
+        .teaser {
+            padding: 18px 0 12px;
+            font-weight: 500;
+            font-size: 12px;
+            
+            .user-icon {
+                .user-icon(32px, 1.3em);
+                margin-right: 10px;
+            }
+            
+            .user-avatar {
+                .user-avatar(32px);
+                margin-right: 10px;
+            }
+        }
+    }
+}
