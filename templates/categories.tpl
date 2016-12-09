@@ -47,15 +47,16 @@
                 <!-- BEGIN posts -->
         	    <!-- IF @first -->
                 <div component="category/posts">
-            		<!-- IF ../user.picture -->
-            		<img class="user-avatar" title="{../user.username}" alt="{../user.username}" src="{../user.picture}" title="{../user.username}"/>
-            		<!-- ELSE -->
-            		<div class="user-icon" title="{../user.username}" style="background-color: {../user.icon:bgColor};">{../user.icon:text}</div>
-            		<!-- ENDIF ../user.picture -->
-            		
-            		<a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>
+                    <a href="{config.relative_path}/user/{../user.userslug}">
+                		<!-- IF ../user.picture -->
+                		<img class="user-avatar" title="{../user.username}" alt="{../user.username}" src="{../user.picture}" title="{../user.username}"/>
+                		<!-- ELSE -->
+                		<div class="user-icon" title="{../user.username}" style="background-color: {../user.icon:bgColor};">{../user.icon:text}</div>
+                		<!-- ENDIF ../user.picture -->
+            		</a>
             		
             		<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">
+            		    {../user.username}
             			<small class="timeago" title="{../timestampISO}"></small>
             		</a>
         		</div>

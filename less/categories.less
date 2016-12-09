@@ -90,15 +90,17 @@
         }
         
         a {
-            display: table-row;
-            color: @primary-color;
+            display: block;
             
             &:hover {
                 text-decoration: none;
             }
             
             &.permalink {
-                color: #999;
+                .timeago {
+                    display: table-row;
+                    color: #999;
+                }
             }
         }
     }
