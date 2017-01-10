@@ -28,5 +28,8 @@
       "name": "pichalite",
       "email": "pichalite.com@gmail.com"
     }
-  ]
+  ],
+  "dependencies": {
+    "async": "^2.1.4"
+  }
 }

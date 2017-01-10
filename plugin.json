@@ -13,6 +13,9 @@
 		},
 		{
 			"hook": "filter:topic.build", "method": "addUserToTopic"
+		},
+		{
+			"hook": "filter:topic.get", "method": "getReactions"
 		}
 	],
 	"scripts": [
@@ -24,5 +27,8 @@
 	"acpScripts": [
 		"lib/admin.js"
 	],
-	"templates": "./templates"
+	"templates": "./templates",
+	"staticDirs": {
+		"static": "static"
+	}
 }

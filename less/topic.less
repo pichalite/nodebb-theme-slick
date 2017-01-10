@@ -196,6 +196,33 @@
 			position: absolute;
 		}
 	}
+	
+	.reaction {
+	    border: 1px solid lighten(@primary-color, 35%);
+	    display: inline-block;
+	    border-radius: 4px;
+	    padding: 0 4px;
+	    cursor: pointer;
+	    
+	    &.reacted {
+	        border: 1px solid @primary-color;
+	    }
+	    
+	    .reaction-emoji {
+            width: 18px;
+            height: 18px;
+	    }
+	    
+	    .reaction-emoji-count {
+	        font-size: 12px;
+	        padding: 0 2px;
+            color: #777;
+    
+	        &:before {
+	            content: attr(data-count);   
+	        }
+	    }
+	}
 }
 
 .fork-thread-card {
