@@ -1,8 +1,10 @@
 <!-- IF loggedIn -->
-<!-- BEGIN posts.reactions -->
-<span class="reaction <!-- IF posts.reactions.reacted -->reacted<!-- ENDIF posts.reactions.reacted -->" component="post/reaction" data-pid="{posts.pid}" data-reaction="{posts.reactions.reaction}" title="{posts.reactions.usernames}">
-	<img class="reaction-emoji" src="{relative_path}/plugins/nodebb-theme-slick/static/images/{posts.reactions.reaction}.png">
-	<span class="reaction-emoji-count" data-count="{posts.reactions.memberCount}"></span>
+<span class="reactions" component="post/reactions" data-pid="{posts.pid}">
+	<span class="reaction-add" component="post/reaction/add" data-pid="{posts.pid}" title="Add reaction">
+		<i class="fa fa-plus-square-o"></i>
+	</span>
+	<!-- BEGIN posts.reactions -->
+	<!-- IMPORT partials/topic/reaction.tpl -->
+	<!-- END posts.reactions -->
 </span>
-<!-- END posts.reactions -->
 <!-- ENDIF loggedIn -->

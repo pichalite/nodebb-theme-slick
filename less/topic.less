@@ -201,16 +201,11 @@
 	    border: 1px solid lighten(@primary-color, 35%);
 	    display: inline-block;
 	    border-radius: 4px;
-	    padding: 0 4px;
+	    padding: 2px 4px;
 	    cursor: pointer;
 	    
 	    &.reacted {
 	        border: 1px solid @primary-color;
-	    }
-	    
-	    .reaction-emoji {
-            width: 18px;
-            height: 18px;
 	    }
 	    
 	    .reaction-emoji-count {
@@ -222,6 +217,11 @@
 	            content: attr(data-count);   
 	        }
 	    }
+	}
+	
+	[component="post/reaction/add"] {
+	    margin-right: 2px;
+	    cursor: pointer;
 	}
 }
 

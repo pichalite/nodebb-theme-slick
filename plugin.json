@@ -27,8 +27,5 @@
 	"acpScripts": [
 		"lib/admin.js"
 	],
-	"templates": "./templates",
-	"staticDirs": {
-		"static": "static"
-	}
+	"templates": "./templates"
 }
