@@ -15,7 +15,7 @@
 			"hook": "filter:topic.build", "method": "addUserToTopic"
 		},
 		{
-			"hook": "filter:topic.get", "method": "getReactions"
+			"hook": "filter:post.getPosts", "method": "getReactions"
 		}
 	],
 	"scripts": [

@@ -8,6 +8,10 @@
 					<span class="mdl-switch__label"><strong>Hide subcategories on categories page</strong></span>
 				</label>
 			</div>
+			<div class="form-group">
+				<label>Maximum reactions per post</label>
+				<input type="text" class="form-control" id="maximumReactions" name="maximumReactions">
+			</div>
 		</form>
 	</div>
 </div>

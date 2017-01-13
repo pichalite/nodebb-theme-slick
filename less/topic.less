@@ -95,7 +95,7 @@
     .post-footer {
         .post-tools {
             a {
-                padding: 0 10px;
+                padding: 0 5px;
             }
         }
         
@@ -197,31 +197,40 @@
 		}
 	}
 	
-	.reaction {
-	    border: 1px solid lighten(@primary-color, 35%);
-	    display: inline-block;
-	    border-radius: 4px;
-	    padding: 2px 4px;
-	    cursor: pointer;
+	.reactions {
+	    display: inline-table;
 	    
-	    &.reacted {
-	        border: 1px solid @primary-color;
-	    }
-	    
-	    .reaction-emoji-count {
-	        font-size: 12px;
-	        padding: 0 2px;
-            color: #777;
-    
-	        &:before {
-	            content: attr(data-count);   
-	        }
-	    }
-	}
-	
-	[component="post/reaction/add"] {
-	    margin-right: 2px;
-	    cursor: pointer;
+        .reaction {
+            border: 1px solid lighten(@primary-color, 35%);
+    	    display: inline-block;
+    	    border-radius: 4px;
+    	    padding: 2px 4px;
+    	    margin: 0 1px;
+    	    cursor: pointer;
+    	    
+    	    &.reacted {
+    	        border: 1px solid @primary-color;
+    	    }
+    	    
+    	    .reaction-emoji-count {
+    	        font-size: 12px;
+    	        padding: 0 2px;
+                color: #777;
+        
+    	        &:before {
+    	            content: attr(data-count);   
+    	        }
+    	    }
+    	}
+    	
+    	.reaction-add {
+    	    margin-right: 2px;
+    	    cursor: pointer;
+    	    
+    	    &.max-reactions {
+    	        display: none;
+    	    }
+    	}   
 	}
 }
 
