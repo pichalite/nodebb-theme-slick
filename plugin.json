@@ -16,6 +16,9 @@
 		},
 		{
 			"hook": "filter:post.getPosts", "method": "getReactions"
+		},
+		{
+			"hook": "action:post.purge", "method": "deleteReactions"
 		}
 	],
 	"scripts": [
