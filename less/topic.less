@@ -94,14 +94,17 @@
     
     .post-footer {
         .post-tools {
-            a {
-                padding: 0 5px;
+            a + a {
+                padding-left: 10px;
+                
+                @media (max-width: @screen-sm-max) {
+                    padding-left: 5px;
+                }
             }
         }
         
         .moderator-tools {
-            padding-right: 10px;
-            padding-left: 10px;
+            padding: 0 10px 0 5px;
             
             >a {
                 color: #333;
@@ -176,8 +179,8 @@
 		position: fixed;
 		width: 100%;
 		background-color: @gray-lighter;
-		bottom: 0px;
-		left: 0px;
+		bottom: 0;
+		left: 0;
 		z-index: 100;
 		transition: opacity 250ms ease-in;
 		opacity: 0;
@@ -187,8 +190,9 @@
 		}
 
 		.wrapper {
-			padding: 5px 0px 5px 0px;
+			padding: 5px 0;
 		}
+		
 		.progress-bar {
 			background-color: @brand-info;
 			display:block;
@@ -198,7 +202,10 @@
 	}
 	
 	.reactions {
-	    display: inline-table;
+	    //display: inline-table;
+	    display: flex;
+        flex-direction: row;
+        align-items: center;
 	    
         .reaction {
             border: 1px solid lighten(@primary-color, 35%);
@@ -224,7 +231,7 @@
     	}
     	
     	.reaction-add {
-    	    margin-right: 2px;
+    	    margin-right: 10px;
     	    cursor: pointer;
     	    
     	    &.max-reactions {
