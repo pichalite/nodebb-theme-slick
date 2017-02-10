@@ -45,6 +45,9 @@
 </div>
 <div class="row post-footer">
 	<div class="col-xs-12">
+		<div class="pull-left">
+			{posts.reactions}
+		</div>
 		<div class="pull-right">
 			<span class="post-tools">
 				<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
