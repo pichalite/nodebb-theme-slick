@@ -3,19 +3,16 @@
         .user-info {
             text-align: center;
             margin-top: 10px;
-            
             .user-avatar {
                 .user-avatar(120px);
             }
-            
             .user-icon {
                 .user-icon(120px, 6em);
             }
-            
-            .user-avatar, .user-icon {
+            .user-avatar,
+            .user-icon {
                 box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
             }
-            
             [component="user/status"] {
                 position: relative;
                 left: 60px;
@@ -23,114 +20,107 @@
                 display: block;
                 font-size: 18px;
             }
-            
             .fullname {
                 margin-top: 10px;
             }
         }
     }
-    
     .account-stats {
         text-align: center;
         padding: 20px 0;
-        
         .stat {
             display: inline-block;
             min-width: 100px;
-            
             .human-readable-number {
                 font-size: 24px;
                 font-weight: 600;
             }
-            
             .stat-label {
                 color: #777;
             }
         }
     }
-    
     .posts-list {
         .posts-list-item {
             margin-bottom: 20px;
             padding-bottom: 20px;
             border-bottom: 1px solid #eaeaea;
-            
             .post-body {
                 .topic-title {
                     font-weight: 600;
                     font-size: 18px;
                     color: #333;
                 }
-                
-                .topic-category>a, .timeago {
+                .topic-category>a,
+                .timeago {
                     color: #777;
                     font-size: 85%;
                 }
             }
         }
     }
-    
     .user-setting {
         margin-bottom: 20px;
         padding: 5px 0 20px;
         border-bottom: 1px solid #eaeaea;
     }
-    
     .section-title {
         margin-bottom: 30px;
         margin-top: 0;
     }
-    
     .account-picture-block {
-        
         .user-avatar {
             .user-avatar(120px);
             margin: 5px 0 20px;
         }
-        
         .user-icon {
             .user-icon(120px, 5em);
             margin: 5px 0 20px;
         }
     }
-    
     .account-menu {
         margin-bottom: 10px;
     }
-    
     .show-success {
-		.form-control {
-			border-color: #5cb85c;
-			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%235cb85c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E");
-			padding-right: 2.25rem;
-		    background-repeat: no-repeat;
-		    background-position: center right .625rem;
-		    -webkit-background-size: 1.25rem 1.25rem;
-		    background-size: 1.25rem 1.25rem;
-		}
-		
-		.form-feedback {
-			color: #5cb85c;
-			display: block;
-			margin-top: .25rem;
-		}
-	}
-	
-	.show-danger {
-		.form-control {
-			border-color: #d9534f;
-			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9534f' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E");
-			padding-right: 2.25rem;
-		    background-repeat: no-repeat;
-		    background-position: center right .625rem;
-		    -webkit-background-size: 1.25rem 1.25rem;
-		    background-size: 1.25rem 1.25rem;
-		}
-		
-		.form-feedback {
-			color: #d9534f;
-			display: block;
-			margin-top: .25rem;
-		}
-	}
+        .form-control {
+            border-color: #5cb85c;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%235cb85c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E");
+            padding-right: 2.25rem;
+            background-repeat: no-repeat;
+            background-position: center right .625rem;
+            -webkit-background-size: 1.25rem 1.25rem;
+            background-size: 1.25rem 1.25rem;
+        }
+        .form-feedback {
+            color: #5cb85c;
+            display: block;
+            margin-top: .25rem;
+        }
+    }
+    .show-danger {
+        .form-control {
+            border-color: #d9534f;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9534f' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E");
+            padding-right: 2.25rem;
+            background-repeat: no-repeat;
+            background-position: center right .625rem;
+            -webkit-background-size: 1.25rem 1.25rem;
+            background-size: 1.25rem 1.25rem;
+        }
+        .form-feedback {
+            color: #d9534f;
+            display: block;
+            margin-top: .25rem;
+        }
+    }
+    .followers {
+        h1 {
+            font-size: 26px;
+        }
+    }
+    .following {
+        h1 {
+            font-size: 26px;
+        }
+    }
 }
