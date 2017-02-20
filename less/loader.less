@@ -1,40 +1,48 @@
-.loader {
-    height: 2px;
+.load-bar {
+    position: absolute;
     width: 100%;
-    position: relative;
-    overflow: hidden;
-    background-color: #ddd;
+    height: 2px;
+    background-color: @primary-color;
 }
 
-.loader:before {
-    display: block;
-    position: absolute;
+.bar {
     content: "";
-    left: -200px;
-    width: 200px;
-    height: 2px;
-    background-color: #2980b9;
-    animation: loading 2s linear infinite;
+    display: inline;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 50%;
+    text-align: center;
+}
+
+.bar:nth-child(1) {
+    background-color: lighten(@primary-color, 20%);
+    animation: loading 3s linear infinite;
+}
+
+.bar:nth-child(2) {
+    background-color: lighten(@primary-color, 40%);
+    animation: loading 3s linear 1s infinite;
+}
+
+.bar:nth-child(3) {
+    background-color: @primary-color;
+    animation: loading 3s linear 2s infinite;
 }
 
 @keyframes loading {
     from {
-        left: -200px;
-        width: 30%;
-    }
-    50% {
-        width: 30%;
-    }
-    70% {
-        width: 70%;
-    }
-    80% {
         left: 50%;
+        width: 0;
+        z-index: 100;
     }
-    95% {
-        left: 120%;
+    33.3333% {
+        left: 0;
+        width: 100%;
+        z-index: 10;
     }
     to {
-        left: 100%;
+        left: 0;
+        width: 100%;
     }
 }

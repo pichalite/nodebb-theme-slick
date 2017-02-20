@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="{function.localeToHTML, defaultLang}">
+
 <head>
 	<title>{browserTitle}</title>
-	<!-- BEGIN metaTags -->{function.buildMetaTag}<!-- END metaTags -->
+	<!-- BEGIN metaTags -->{function.buildMetaTag}
+	<!-- END metaTags -->
 	<link rel="stylesheet" type="text/css" href="{relative_path}/stylesheet.css?{config.cache-buster}" />
-	<!-- BEGIN linkTags -->{function.buildLinkTag}<!-- END linkTags -->
+	<!-- BEGIN linkTags -->{function.buildLinkTag}
+	<!-- END linkTags -->
 
 	<script>
 		var RELATIVE_PATH = "{relative_path}";
@@ -25,7 +28,13 @@
 	{{customJS}}
 	<!-- ENDIF useCustomJS -->
 	<!-- IF useCustomCSS -->
-	<style type="text/css">{{customCSS}}</style>
+	<style type="text/css">
+		{
+			{
+				customCSS
+			}
+		}
+	</style>
 	<!-- ENDIF useCustomCSS -->
 </head>
 
@@ -34,7 +43,7 @@
 		<section class="menu-profile">
 			<!-- IF user.uid -->
 			<!-- IF user.picture -->
-			<img class="user-avatar" src="{user.picture}"/>
+			<img class="user-avatar" src="{user.picture}" />
 			<!-- ELSE -->
 			<div class="user-icon" style="background-color: {user.icon:bgColor};">{user.icon:text}</div>
 			<!-- ENDIF user.picture -->
@@ -74,10 +83,14 @@
 
 	<main id="panel">
 		<nav class="navbar navbar-default navbar-fixed-top header" id="header-menu" component="navbar">
+			<div class="load-bar">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
 			<div class="container">
-				<div class="loader"></div>
 				<!-- IMPORT partials/menu.tpl -->
 			</div>
 		</nav>
 		<div class="container" id="content">
-		<!-- IMPORT partials/noscript/warning.tpl -->
+			<!-- IMPORT partials/noscript/warning.tpl -->
