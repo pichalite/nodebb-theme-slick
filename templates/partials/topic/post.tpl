@@ -30,18 +30,25 @@
 			<!-- ENDIF posts.user.picture -->
 		</a>
 		<div class="author">
-		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
+			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 			{posts.user.username}
 		</a>
-		</br>
-		<!-- IF posts.user.selectedGroup.slug -->
-		<a href="{config.relative_path}/groups/{posts.user.selectedGroup.slug}"><small class="label group-label" style="background-color: {posts.user.selectedGroup.labelColor};"><!-- IF posts.user.selectedGroup.icon --><i class="fa {posts.user.selectedGroup.icon}"></i> <!-- ENDIF posts.user.selectedGroup.icon -->{posts.user.selectedGroup.userTitle}</small></a>
-		<!-- ENDIF posts.user.selectedGroup.slug -->
+			</br>
+			<!-- IF posts.user.selectedGroup.slug -->
+			<a href="{config.relative_path}/groups/{posts.user.selectedGroup.slug}"><small class="label group-label" style="background-color: {posts.user.selectedGroup.labelColor};"><!-- IF posts.user.selectedGroup.icon --><i class="fa {posts.user.selectedGroup.icon}"></i> <!-- ENDIF posts.user.selectedGroup.icon -->{posts.user.selectedGroup.userTitle}</small></a>
+			<!-- ENDIF posts.user.selectedGroup.slug -->
 		</div>
 	</div>
 	<div class="col-sm-10 col-md-10 col-lg-10 post-content">
 		{posts.content}
 	</div>
+	<!-- IF posts.user.signature -->
+	<div class="col-sm-10 col-md-10 col-lg-10">
+		<div class="post-signature" component="post/signature" data-uid="{posts.user.uid}">
+			{posts.user.signature}
+		</div>
+	</div>
+	<!-- ENDIF posts.user.signature -->
 </div>
 <div class="row post-footer">
 	<div class="col-xs-12">
@@ -53,7 +60,7 @@
 				<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
 				<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
 			</span>
-			
+
 			<!-- IMPORT partials/topic/post-menu.tpl -->
 		</div>
 	</div>
