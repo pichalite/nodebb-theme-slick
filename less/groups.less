@@ -1,75 +1,71 @@
 .groups {
-    
-    #groups-list {
-        margin-top: 20px;
-    
-        .list-cover {
-    		display: block;
-    		background-size: cover;
-    		min-height: 125px;
-    		background-position: 50% 50%;
-    		
-    		.panel-title {
-    		    background-color: rgba(0,0,0,0.5);
-    		    color: #fff;
-    		    display: inline-block;
-                padding: 5px;
-    		}
+    &.details {
+        h1 {
+            font-size: 22px;
+            margin-top: 10px;
         }
     }
-    
+    #groups-list {
+        margin-top: 20px;
+        .list-cover {
+            display: block;
+            background-size: cover;
+            min-height: 125px;
+            background-position: 50% 50%;
+            .panel-title {
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                display: inline-block;
+                padding: 5px;
+            }
+        }
+    }
     .members {
         list-style: none;
         padding: 0;
-        
+        li {
+            display: inline-block;
+        }
         .user-avatar {
             .user-avatar(30px);
         }
-        
         .user-icon {
             .user-icon(30px, 1.3em);
         }
     }
-    
     .posts-list {
         .posts-list-item {
             margin-bottom: 20px;
             padding-bottom: 20px;
             border-bottom: 1px solid #eaeaea;
-            
             .post-body {
                 .topic-title {
                     font-weight: 600;
                     font-size: 18px;
                     color: #333;
                 }
-                
-                .topic-category>a, .timeago {
+                .topic-category>a,
+                .timeago {
                     color: #777;
                     font-size: 85%;
                 }
             }
         }
     }
-    
     .user-avatar {
         .user-avatar(30px);
     }
-    
     .user-icon {
         .user-icon(30px, 1.3em);
     }
-    
     .btn-info {
         color: #fff;
     }
-    
     .panel-default {
         border-color: #eaeaea;
-        
         .panel-heading {
             background: none;
             border-color: #eaeaea;
-        }    
+        }
     }
 }

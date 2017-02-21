@@ -13,16 +13,17 @@
 			      [[user:more]] <span class="caret"></span>
 			    </a>
 				<ul class="dropdown-menu dropdown-menu-right">
+					<!-- IF loggedIn -->
 					<!-- IF !isSelf -->
 					<!-- IF !config.disableChat -->
 					<!-- IF !banned -->
 					<li>
 						<a component="account/chat" href="#">[[user:chat_with, {username}]]</a>
 					</li>
-					<li class="divider"></li>
 					<!-- ENDIF !banned -->
 					<!-- ENDIF !config.disableChat -->
 					<!-- ENDIF !isSelf -->
+					<!-- ENDIF loggedIn -->
 
 					<!-- IF !isSelf -->
 					<!-- IF canBan -->
