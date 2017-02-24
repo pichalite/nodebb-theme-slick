@@ -6,7 +6,7 @@
 			<input class="form-control" type="text" component="chat/search" placeholder="[[users:enter_username]]" />
 		</div>
 		<ul component="chat/search/list" class="chat-search-list">
-			
+
 		</ul>
 		<ul component="chat/recent" class="chats-list" data-nextstart="{nextStart}">
 			<!-- BEGIN rooms -->
@@ -26,18 +26,18 @@
 				<input class="users-tag-input" type="text" class="form-control" placeholder="[[modules:chat.add-users-to-room]]" tabindex="4"/>
 			</div>
 			<!-- ENDIF showUserInput -->
-			
+
 			<!-- IF groupChat -->
 			<input class="form-control" component="chat/room/name" value="{roomName}" <!-- IF !isOwner -->disabled<!-- ENDIF !isOwner -->/>
 			<!-- ENDIF groupChat -->
-			
+
 			<ul class="chat-content">
 				<!-- IMPORT partials/chats/messages.tpl -->
 			</ul>
 			<div class="input-group">
-				<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap" rows="1"></textarea>
+				<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap" rows="1" <!-- IF !canReply -->readonly<!-- ENDIF !canReply -->></textarea>
 				<span class="input-group-btn">
-					<button class="btn btn-primary" type="button" data-action="send">[[modules:chat.send]]</button>
+					<button class="btn btn-primary" type="button" data-action="send" <!-- IF !canReply -->disabled<!-- ENDIF !canReply -->>[[modules:chat.send]]</button>
 				</span>
 			</div>
 		</div>

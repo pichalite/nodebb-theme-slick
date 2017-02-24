@@ -1,6 +1,6 @@
 <div class="account">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
-	
+
 	<!-- IMPORT partials/account/menu.tpl -->
 
 	<!-- IF sessions.length -->
@@ -12,7 +12,9 @@
 				<li class="list-group-item" data-uuid="{../uuid}">
 					<div class="pull-right">
 						<!-- IF !../current -->
+						<!-- IF isSelfOrAdminOrGlobalModerator -->
 						<button class="btn btn-xs btn-default" type="button" data-action="revokeSession">Revoke Session</button>
+						<!-- ENDIF isSelfOrAdminOrGlobalModerator -->
 						<!-- ENDIF !../current -->
 						{function.userAgentIcons}
 						<i class="fa fa-circle text-<!-- IF ../current -->success<!-- ELSE -->muted<!-- ENDIF ../current -->"></i>

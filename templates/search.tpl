@@ -53,6 +53,11 @@
 						</div>
 
 						<div class="form-group post-search-item">
+							<label>[[search:has-tags]]</label>
+							<input type="text" class="form-control" id="has-tags">
+						</div>
+
+						<div class="form-group post-search-item">
 							<label>[[search:reply-count]]</label>
 							<div class="row">
 								<div class="col-md-6">
@@ -96,7 +101,7 @@
 							<div class="row">
 								<div class="col-md-6">
 									<select id="post-sort-by" class="form-control">
-										<option value=""></option>
+										<option value="relevance">[[search:relevance]]</option>
 										<option value="timestamp">[[search:post-time]]</option>
 										<option value="teaser.timestamp">[[search:last-reply-time]]</option>
 										<option value="topic.title">[[search:topic-title]]</option>
@@ -131,7 +136,7 @@
 								</label>
 							</div>
 						</div>
-						
+
 						<div class="btn-group">
 							<button type="submit" class="btn btn-primary">[[global:search]]</button>
 							<a class="btn btn-default" id="save-preferences" href="#">[[search:save-preferences]]</a>

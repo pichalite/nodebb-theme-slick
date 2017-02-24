@@ -9,7 +9,7 @@
     </div>
     <!-- ENDIF topics.length -->
     <!-- BEGIN topics -->
-    <div component="category/topic" class="row {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
+    <div component="category/topic" class="row category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 		<meta itemprop="name" content="{function.stripTags, title}">
 		<div class="col-md-8 col-xs-12">
 			<!-- IF showSelect -->
@@ -42,7 +42,7 @@
 				<!-- ELSE -->
 				<span>{topics.title}</span>
 				<!-- ENDIF !topics.noAnchor -->
-				
+
 				<small>
 					<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.username}</a> &bull; <span class="timeago" title="{topics.timestampISO}"></span>
 				</small>
@@ -71,7 +71,7 @@
 				<!-- ELSE -->
 				<div title="{topics.teaser.user.username}" class="user-icon" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</div>
 				<!-- ENDIF topics.teaser.user.picture -->
-				
+
 				<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{topics.teaser.user.username}</a>
 				<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 					<span class="timeago" title="{topics.teaser.timestampISO}"></span>
