@@ -13,6 +13,15 @@
 		},
 		{
 			"hook": "filter:topic.build", "method": "addUserToTopic"
+		},
+		{
+			"hook": "filter:user.customSettings", "method": "customSettings"
+		},
+		{
+			"hook": "action:user.saveSettings", "method": "saveSettings"
+		},
+		{
+			"hook": "filter:user.getSettings", "method": "getSettings"
 		}
 	],
 	"scripts": [
