@@ -49,12 +49,12 @@
     		</div>
 		</div>
 		<div class="col-md-1 hidden-xs hidden-sm">
-		    <div class="total-post-count human-readable-number">
+		    <div class="total-post-count human-readable-number" title="{topics.postcount}">
 		        {topics.postcount}
 		    </div>
 		</div>
 		<div class="col-md-1 hidden-xs hidden-sm">
-		    <div class="total-view-count human-readable-number">
+		    <div class="total-view-count human-readable-number" title="{topics.viewcount}">
 		        {topics.viewcount}
 		    </div>
 		</div>

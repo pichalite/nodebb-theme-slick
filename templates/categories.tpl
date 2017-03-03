@@ -14,12 +14,12 @@
                         <i class="fa fa-fw {categories.icon}"></i>
                     </div>
                     <a class="category-title" href="{config.relative_path}/category/{categories.slug}" title="{categories.name}">{categories.name}</a>
-            
+
                     <div class="category-description">
                         {categories.descriptionParsed}
                     </div>
                 </div>
-                
+
                 <!-- IF !config.hideSubCategories -->
                 <div class="subcategories">
                     <!-- BEGIN categories.children -->
@@ -33,12 +33,12 @@
             </div>
         </div>
         <div class="col-md-1 hidden-xs hidden-sm">
-            <div class="total-topic-count human-readable-number">
+            <div class="total-topic-count human-readable-number" title="{categories.totalTopicCount}">
                 {categories.totalTopicCount}
             </div>
         </div>
         <div class="col-md-1 hidden-xs hidden-sm">
-            <div class="total-post-count human-readable-number">
+            <div class="total-post-count human-readable-number" title="{categories.totalPostCount}">
                 {categories.totalPostCount}
             </div>
         </div>
@@ -54,7 +54,7 @@
                 		<div class="user-icon" title="{../user.username}" style="background-color: {../user.icon:bgColor};">{../user.icon:text}</div>
                 		<!-- ENDIF ../user.picture -->
             		</a>
-            		
+
             		<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">
             		    {../user.username}
             			<small class="timeago" title="{../timestampISO}"></small>
@@ -62,7 +62,7 @@
         		</div>
         		<!-- ENDIF @first -->
         	    <!-- END posts -->
-        	    
+
         	    <!-- IF !../posts.length -->
     			[[category:no_new_posts]]
     	        <!-- ENDIF !../posts.length -->
