@@ -10,7 +10,7 @@
 		<td>
 			<a href="{config.relative_path}/user/{group.members.userslug}">
 				<!-- IF group.members.picture -->
-				<img class="user-avatar" src="{group.members.picture}" />
+				<img class="user-avatar" src="{group.members.picture}" alt="{group.members.username}" />
 				<!-- ELSE -->
 				<div class="user-icon" style="background-color: {group.members.icon:bgColor};">{group.members.icon:text}</div>
 				<!-- ENDIF group.members.picture -->

@@ -2,7 +2,7 @@
 <div class="row">
 	<div class="topic col-lg-12 col-sm-12" has-widget-class="topic col-lg-9 col-sm-12" has-widget-target="sidebar">
 
-		<h1 component="post/header" class="hidden-xs" itemprop="name">
+		<h1 component="post/header" class="hidden-xs">
 			<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="[[topic:pinned]]"></i>
 			<i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
 			<i class="pull-left fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
@@ -15,7 +15,7 @@
 		<div component="topic" class="posts" data-tid="{tid}" data-cid="{cid}">
 			<!-- BEGIN posts -->
 				<div component="post" class="<!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
-					<a component="post/anchor" data-index="{posts.index}" name="{posts.index}"></a>
+					<a component="post/anchor" data-index="{posts.index}"></a>
 
 					<meta itemprop="datePublished" content="{posts.timestampISO}">
 					<meta itemprop="dateModified" content="{posts.editedISO}">
@@ -27,9 +27,9 @@
 				<!-- ENDIF !posts.index -->
 			<!-- END posts -->
 		</div>
-		
+
 		<!-- IMPORT partials/topic/quickreply.tpl -->
-		
+
 		<div class="post-bar">
 			<!-- IMPORT partials/post_bar.tpl -->
 		</div>
@@ -48,7 +48,7 @@
 				<i class="fa fa-2x fa-angle-double-down pointer fa-fw pagebottom"></i>
 			</div>
 		</div>
-		
+
 	</div>
 </div>
 

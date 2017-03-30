@@ -8,7 +8,7 @@
 					<strong>[[error:registration-error]]</strong>
 					<p>{error}</p>
 				</div>
-				<form component="register/local" class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
+				<form component="register/local" class="form-horizontal" action="{config.relative_path}/register" method="post">
 					<div class="form-group">
 						<label for="email" class="col-lg-3 control-label">[[register:email_address]]</label>
 						<div class="col-lg-7">
@@ -40,7 +40,7 @@
 							<span class="register-feedback" id="password-confirm-notify"></span>
 						</div>
 					</div>
-	
+
 					<!-- BEGIN regFormEntry -->
 					<div class="form-group">
 						<label for="register-{regFormEntry.styleName}" class="col-lg-3 control-label">{regFormEntry.label}</label>
@@ -49,7 +49,7 @@
 						</div>
 					</div>
 					<!-- END regFormEntry -->
-	
+
 					<div class="form-group">
 						<div class="col-lg-offset-3 col-lg-7">
 							<button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register_now_button]]</button>
@@ -60,12 +60,12 @@
 				</form>
 			</div>
 		</div>
-	
+
 		<!-- IF alternate_logins -->
 		<div class="col-lg-offset-3 col-lg-7">
 			<div class="alt-logins">
 				<!-- BEGIN authentication -->
-				<div class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></i></a></div>
+				<div class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></div>
 				<!-- END authentication -->
 			</div>
 		</div>

@@ -23,10 +23,10 @@
 		    <div class="topic-author">
     		    <a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-left">
     				<!-- IF topics.thumb -->
-    				<img src="{topics.thumb}" class="user-img" />
+    				<img src="{topics.thumb}" class="user-img" alt="{topics.user.username}" />
     				<!-- ELSE -->
     				<!-- IF topics.user.picture -->
-    				<img class="user-avatar" component="user/picture" data-uid="{topics.user.uid}" src="{topics.user.picture}" />
+    				<img class="user-avatar" component="user/picture" data-uid="{topics.user.uid}" src="{topics.user.picture}" alt="{topics.user.username}" />
     				<!-- ELSE -->
     				<div class="user-icon" style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
     				<!-- ENDIF topics.user.picture -->
@@ -67,7 +67,7 @@
 				<!-- ELSE -->
 		        <!-- IF topics.teaser.pid -->
 				<!-- IF topics.teaser.user.picture -->
-				<img title="{topics.teaser.user.username}" class="user-avatar" src="{topics.teaser.user.picture}" />
+				<img title="{topics.teaser.user.username}" class="user-avatar" src="{topics.teaser.user.picture}" alt="{topics.teaser.user.username}" />
 				<!-- ELSE -->
 				<div title="{topics.teaser.user.username}" class="user-icon" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</div>
 				<!-- ENDIF topics.teaser.user.picture -->

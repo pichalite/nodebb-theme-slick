@@ -13,7 +13,7 @@
 				</div>
 				<div class="panel-body">
 					<h1>{group.displayName}</h1>
-					<p>{group.descriptionParsed}</p>
+					{group.descriptionParsed}
 					<!-- IF isAdmin -->
 					<div class="pull-right">
 						<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-info"><i class="fa fa-gear"></i> [[user:edit]]</a>
@@ -61,7 +61,7 @@
 						<tr data-uid="{group.pending.uid}">
 							<td>
 								<!-- IF group.pending.picture -->
-								<a href="{config.relative_path}/user/{group.pending.userslug}"><img class="user-avatar" src="{group.pending.picture}" /></a>
+								<a href="{config.relative_path}/user/{group.pending.userslug}"><img class="user-avatar" src="{group.pending.picture}" alt="{group.pending.username}" /></a>
 								<!-- ELSE -->
 								<div class="user-icon" style="background-color: {group.pending.icon:bgColor};">{group.pending.icon:text}</div>
 								<!-- ENDIF group.pending.picture -->
@@ -96,7 +96,7 @@
 						<input class="form-control" type="text" component="groups/members/invite" placeholder="[[groups:invited.search]]"/>
 						<span class="input-group-addon search-button"><i class="fa fa-search"></i></span>
 					</div><br />
-	
+
 					<table component="groups/invited" class="table table-striped table-hover">
 						<!-- IF !group.invited.length -->
 						<div class="alert alert-info">[[groups:invited.none]]</div>
@@ -105,7 +105,7 @@
 						<tr data-uid="{group.invited.uid}">
 							<td>
 								<!-- IF group.invited.picture -->
-								<a href="{config.relative_path}/user/{group.invited.userslug}"><img class="user-avatar" src="{group.invited.picture}" /></a>
+								<a href="{config.relative_path}/user/{group.invited.userslug}"><img class="user-avatar" src="{group.invited.picture}" alt="{group.invited.username}" /></a>
 								<!-- ELSE -->
 								<div class="user-icon" style="background-color: {group.invited.icon:bgColor};">{group.invited.icon:text}</div>
 								<!-- ENDIF group.invited.picture -->
@@ -128,7 +128,7 @@
 					</table>
 				</div>
 			</div>
-	
+
 			<div class="panel panel-default">
 				<div class="panel-heading pointer" data-toggle="collapse" data-target=".options">
 					<h3 class="panel-title">
@@ -136,7 +136,7 @@
 						<i class="fa fa-cogs"></i> [[groups:details.owner_options]]
 					</h3>
 				</div>
-	
+
 				<div class="panel-body options collapse">
 					<form component="groups/settings" role="form">
 						<div class="form-group">
@@ -151,11 +151,11 @@
 							<label for="userTitle">[[groups:details.badge_text]]</label>
 							<input component="groups/userTitleOption" class="form-control" name="userTitle" id="userTitle" type="text" maxlength="40" value="{group.userTitle}"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled --> />
 						</div>
-	
+
 						<div class="form-group user-title-option">
 							<label>[[groups:details.badge_preview]]</label><br />
 							<span class="label<!-- IF !group.userTitleEnabled --> hide<!-- ENDIF !group.userTitleEnabled -->" style="background-color: {group.labelColor}"><i class="fa<!-- IF group.icon --> {group.icon}<!-- ENDIF group.icon -->"></i> <!-- IF group.userTitle -->{group.userTitle}<!-- ELSE -->{group.displayName}<!-- ENDIF group.userTitle --></span>
-	
+
 							<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="icon-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_icon]]</button>
 							<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_colour]]</button>
 							<input type="hidden" name="labelColor" value="<!-- IF group.labelColor -->{group.labelColor}<!-- ENDIF group.labelColor -->" />
@@ -201,7 +201,7 @@
 								</p>
 							</label>
 						</div>
-						
+
 						<!-- IF !group.system -->
 						<button class="btn btn-danger btn-xs pull-right" type="button" data-action="delete">[[groups:details.delete_group]]</button>
 						<!-- ENDIF !group.system -->

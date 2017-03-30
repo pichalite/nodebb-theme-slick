@@ -28,7 +28,7 @@
 	<div class="col-sm-2 col-md-2 col-lg-2 post-author">
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 			<!-- IF posts.user.picture -->
-			<img component="user/picture" data-uid="{posts.user.uid}" class="user-avatar" src="{posts.user.picture}" align="left" itemprop="image" />
+			<img component="user/picture" data-uid="{posts.user.uid}" class="user-avatar" src="{posts.user.picture}" alt="{posts.user.username}" itemprop="image" />
 			<!-- ELSE -->
 			<div component="user/picture" data-uid="{posts.user.uid}" class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
 			<!-- ENDIF posts.user.picture -->
@@ -37,7 +37,7 @@
 			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 			{posts.user.username}
 		</a>
-			</br>
+			<br>
 			<!-- IF posts.user.selectedGroup.slug -->
 			<a href="{config.relative_path}/groups/{posts.user.selectedGroup.slug}"><small class="label group-label" style="background-color: {posts.user.selectedGroup.labelColor};"><!-- IF posts.user.selectedGroup.icon --><i class="fa {posts.user.selectedGroup.icon}"></i> <!-- ENDIF posts.user.selectedGroup.icon -->{posts.user.selectedGroup.userTitle}</small></a>
 			<!-- ENDIF posts.user.selectedGroup.slug -->
@@ -60,10 +60,10 @@
 			{posts.reactions}
 		</div>
 		<div class="pull-right">
-			<span class="post-tools">
+			<div class="post-tools">
 				<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
 				<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
-			</span>
+			</div>
 
 			<!-- IMPORT partials/topic/post-menu.tpl -->
 		</div>

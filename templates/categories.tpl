@@ -49,7 +49,7 @@
                 <div component="category/posts">
                     <a href="{config.relative_path}/user/{../user.userslug}">
                 		<!-- IF ../user.picture -->
-                		<img class="user-avatar" title="{../user.username}" alt="{../user.username}" src="{../user.picture}" title="{../user.username}"/>
+                		<img class="user-avatar" title="{../user.username}" alt="{../user.username}" src="{../user.picture}" />
                 		<!-- ELSE -->
                 		<div class="user-icon" title="{../user.username}" style="background-color: {../user.icon:bgColor};">{../user.icon:text}</div>
                 		<!-- ENDIF ../user.picture -->

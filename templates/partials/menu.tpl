@@ -6,14 +6,17 @@
 					<span class="icon-bar"></span>
 				</button>
 
+				<!-- IF config.showSiteTitle -->
+				<a href="{relative_path}/">
+					<span class="navbar-brand forum-title">{title}</span>
+				</a>
+				<!-- ENDIF config.showSiteTitle -->
+
+				<!-- IF brand:logo -->
 				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
 					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}" />
 				</a>
-				<!-- IF config.showSiteTitle -->
-				<a href="{relative_path}/">
-					<h1 class="navbar-brand forum-title">{title}</h1>
-				</a>
-				<!-- ENDIF config.showSiteTitle -->
+				<!-- ENDIF brand:logo -->
 
 			</div>
 
@@ -129,7 +132,7 @@
 				<!-- IF config.searchEnabled -->
 				<ul class="nav navbar-nav navbar-right search-menu">
 					<li>
-						<form id="search-form" class="navbar-form navbar-right hidden-xs" role="search" method="GET" action="">
+						<form id="search-form" class="navbar-form navbar-right hidden-xs" role="search" method="GET">
 							<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
 							<div class="hidden" id="search-fields">
 								<div class="form-group">
@@ -155,7 +158,7 @@
 						</a>
 					</li>
 				</ul>
-				
+
 				<ul class="nav navbar-nav navbar-right pagination-block visible-lg visible-md">
 					<li class="dropdown">
 						<i class="fa fa-angle-double-up pointer fa-fw pagetop"></i>
@@ -173,7 +176,9 @@
 						</div>
 
 						<ul class="dropdown-menu" role="menu">
-  							<input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
+							<li>
+  								<input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
+  							</li>
   						</ul>
 					</li>
 				</ul>

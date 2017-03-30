@@ -10,8 +10,8 @@
 					<strong>[[login:failed_login_attempt]]</strong>
 					<p>{error}</p>
 				</div>
-	
-				<form class="form-horizontal" role="form" method="post" target="login" id="login-form">
+
+				<form class="form-horizontal" method="post" target="login" id="login-form">
 					<div class="form-group">
 						<label for="username" class="col-lg-2 control-label">{allowLoginWith}</label>
 						<div class="col-lg-10">
@@ -37,7 +37,7 @@
 					<div class="form-group">
 						<div class="col-lg-offset-2 col-lg-10">
 							<button class="btn btn-primary btn-lg btn-block" id="login" type="submit">[[global:login]]</button>
-							
+
 							<div class="register-forgot-pwd">
 							<!-- IF allowRegistration -->
 							<span>[[login:dont_have_account]] <a href="{config.relative_path}/register">[[register:register]]</a></span>
@@ -47,11 +47,11 @@
 						</div>
 					</div>
 				</form>
-	
+
 			</div>
 		</div>
 		<!-- ENDIF allowLocalLogin -->
-	
+
 		<!-- IF alternate_logins -->
 		<div class="col-lg-offset-2 col-lg-10">
 			<div class="alt-logins">
