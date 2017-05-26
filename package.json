@@ -2,7 +2,7 @@
   "name": "nodebb-theme-slick",
   "version": "1.0.2",
   "nbbpm": {
-    "compatibility": "^1.4.4"
+    "compatibility": "^1.5.0"
   },
   "description": "Slick theme for NodeBB",
   "main": "theme.less",

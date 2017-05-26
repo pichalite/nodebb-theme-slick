@@ -1,4 +1,4 @@
-<li component="chat/message" class="chat-message clear" data-index="{messages.index}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}">
+<li component="chat/message" class="chat-message clear" data-index="{messages.index}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}" data-timestamp="{messages.timestamp}">
 	<div class="message-header">
 		<a href="{config.relative_path}/user/{messages.fromUser.userslug}">
 			<!-- IF messages.fromUser.picture -->
@@ -14,7 +14,7 @@
 		<!-- IF messages.edited -->
 		<small class="text-muted pull-right" title="[[global:edited]] {messages.editedISO}"><i class="fa fa-edit"></i></span></small>
 		<!-- ENDIF messages.edited -->
-		
+
 		<!-- IF !config.disableChatMessageEditing -->
 		<!-- IF messages.self -->
 		<div class="pull-right btn-group controls">
@@ -23,7 +23,7 @@
 		</div>
 		<!-- ENDIF messages.self -->
 		<!-- ENDIF !config.disableChatMessageEditing -->
-		
+
 		{messages.content}
 	</div>
 </li>

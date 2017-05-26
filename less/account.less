@@ -115,4 +115,31 @@
     h1 {
         font-size: 26px;
     }
+
+    [component="account/moderation-note/list"] {
+
+        .note-author {
+            text-align: center;
+
+            @media (max-width: @screen-xs-max) {
+                text-align: left;
+                padding-bottom: 10px;
+            }
+        }
+
+        .user-avatar {
+            .user-avatar(30px);
+            margin: 5px;
+        }
+
+        .user-icon {
+            .user-icon(30px, 1.5em);
+            margin: 5px;
+        }
+
+        .timeago {
+            font-size: 12px;
+            color: #bbb;
+        }
+    }
 }

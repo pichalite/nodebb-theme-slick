@@ -141,7 +141,7 @@
 					<form component="groups/settings" role="form">
 						<div class="form-group">
 							<label for="name">[[groups:details.group_name]]</label>
-							<input class="form-control" name="name" id="name" type="text" value="{group.displayName}" />
+							<input class="form-control" name="name" id="name" type="text" value="{group.displayName}" <!-- IF group.system -->readonly<!-- ENDIF group.system --> />
 						</div>
 						<div class="form-group">
 							<label for="name">[[groups:details.description]]</label>

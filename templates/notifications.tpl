@@ -2,17 +2,29 @@
 
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
-	<div class="dropdown pull-right hidden">
-		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-			<i class="fa fa-eye"></i>
-			<span class="caret"></span>
-		</button>
-		<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
-			<li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-ajaxify="false" component="notifications/mark_all">[[notifications:mark_all_read]]</a></li>
-		</ul>
+	<div class="btn-toolbar">
+		<div class="btn-group dropdown pull-right">
+			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+				<!-- IF selectedFilter -->{selectedFilter.name}<!-- ENDIF selectedFilter --> <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<!-- BEGIN filters -->
+				<!-- IF filters.separator -->
+				<li role="separator" class="divider"></li>
+				<!-- ELSE -->
+				<li role="presentation" class="category">
+					<a role="menu-item" href="{config.relative_path}/notifications?filter={filters.filter}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i> {filters.name}</a>
+				</li>
+				<!-- ENDIF filters.separator -->
+				<!-- END filters -->
+			</ul>
+		</div>
+		<div class="btn-group pull-right">
+			<button class="btn btn-default" type="button" component="notifications/mark_all">
+				[[notifications:mark_all_read]]
+			</button>
+		</div>
 	</div>
-
-	<hr />
 
 	<div class="alert alert-info <!-- IF notifications.length -->hidden<!-- ENDIF notifications.length -->">
 		[[notifications:no_notifs]]
@@ -32,7 +44,7 @@
 			</div>
 			<div class="notification-msg">
 				<a component="notifications/item/link" href="{config.relative_path}{notifications.path}">{notifications.bodyShort}</a>
-				
+
 				<span class="timeago" title="{notifications.datetimeISO}"></span>
 			</div>
 		</div>
