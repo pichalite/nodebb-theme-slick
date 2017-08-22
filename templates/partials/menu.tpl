@@ -7,7 +7,7 @@
 				</button>
 
 				<!-- IF config.showSiteTitle -->
-				<a href="{relative_path}/">
+				<a href="<!-- IF title:url -->{title:url}<!-- ELSE -->{relative_path}/<!-- ENDIF title:url -->">
 					<span class="navbar-brand forum-title">{title}</span>
 				</a>
 				<!-- ENDIF config.showSiteTitle -->
