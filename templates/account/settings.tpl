@@ -1,6 +1,6 @@
 <div class="account">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
-	
+
 	<!-- IMPORT partials/account/menu.tpl -->
 
 	<div class="row">
@@ -53,19 +53,23 @@
 				</div>
 				<p class="help-block">[[user:image_load_delay_help]]</p>
 			</div>
-			
+
 			<h4>[[global:privacy]]</h4>
 			<div class="user-setting">
+				<!-- IF !hideEmail -->
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/><i class="input-helper"></i> <strong>[[user:show_email]]</strong>
 					</label>
 				</div>
+				<!-- ENDIF !hideEmail -->
+				<!-- IF !hideFullname -->
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->/><i class="input-helper"></i> <strong>[[user:show_fullname]]</strong>
 					</label>
 				</div>
+				<!-- ENDIF !hideFullname -->
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/><i class="input-helper"></i> <strong>[[user:restrict_chats]]</strong>
@@ -99,7 +103,7 @@
 				</div>
 			</div>
 			<!-- ENDIF !disableEmailSubscriptions -->
-			
+
 			<h4>[[topic:watch]]</h4>
 			<div class="user-setting">
 				<div class="checkbox">
@@ -126,13 +130,13 @@
 					<label for="topicsPerPage">[[user:topics_per_page]]</label>
 					<input type="text" class="form-control" data-property="topicsPerPage" value="{settings.topicsPerPage}">
 				</div>
-				
+
 				<div class="form-group">
 					<label for="postsPerPage">[[user:posts_per_page]]</label>
 					<input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}">
 				</div>
 			</div>
-			
+
 			<h4>[[global:language]]</h4>
 			<div class="user-setting">
 				<select data-property="userLang" class="form-control">
@@ -189,14 +193,14 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!-- BEGIN customSettings -->
 			<h4>{customSettings.title}</h4>
 			<div class="user-setting">
 				{customSettings.content}
 			</div>
 			<!-- END customSettings -->
-			
+
 		</div>
 	</div>
 	<div class="form-actions">

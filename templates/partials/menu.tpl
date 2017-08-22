@@ -94,15 +94,31 @@
 							</li>
 							<li role="presentation" class="divider"></li>
 							<li>
-								<a href="{relative_path}/user/{user.userslug}/edit">
+								<a component="header/profilelink/edit" href="{relative_path}/user/{user.userslug}/edit">
 									<i class="fa fa-fw fa-edit"></i> <span>[[user:edit-profile]]</span>
 								</a>
 							</li>
 							<li>
-								<a href="{relative_path}/user/{user.userslug}/settings">
+								<a component="header/profilelink/settings" href="{relative_path}/user/{user.userslug}/settings">
 									<i class="fa fa-fw fa-gear"></i> <span>[[user:settings]]</span>
 								</a>
 							</li>
+							<!-- IF showModMenu -->
+							<li role="presentation" class="divider"></li>
+							<li class="dropdown-header">[[pages:moderator-tools]]</li>
+							<li>
+								<a href="{relative_path}/flags">
+									<i class="fa fa-fw fa-flag"></i> <span>[[pages:flagged-content]]</span>
+								</a>
+							</li>
+							<!-- IF isAdmin -->
+							<li>
+								<a href="{relative_path}/ip-blacklist">
+									<i class="fa fa-fw fa-ban"></i> <span>[[pages:ip-blacklist]]</span>
+								</a>
+							</li>
+							<!-- ENDIF isAdmin -->
+							<!-- ENDIF showModMenu -->
 							<li role="presentation" class="divider"></li>
 							<li component="user/logout">
 								<a href="#"><i class="fa fa-fw fa-sign-out"></i><span> [[global:logout]]</span></a>
@@ -187,7 +203,7 @@
 					<!-- BEGIN navigation -->
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}">
-						<a href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
+						<a class="navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
 							<!-- IF navigation.iconClass -->
 							<i class="fa fa-fw {navigation.iconClass}"></i>
 							<!-- ENDIF navigation.iconClass -->

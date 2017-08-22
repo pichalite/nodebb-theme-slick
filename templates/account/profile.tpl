@@ -21,6 +21,18 @@
 					<!-- ENDIF !banned -->
 				</h4>
 
+				<!-- IF isAdminOrGlobalModeratorOrModerator -->
+				<!-- IF banned -->
+				<div class="text-center">
+				<!-- IF banned_until -->
+				[[user:info.banned-until, {banned_until_readable}]]
+				<!-- ELSE -->
+				[[user:info.banned-permanently]]
+				<!-- ENDIF banned_until -->
+				</div>
+				<!-- ENDIF banned -->
+				<!-- ENDIF isAdminOrGlobalModeratorOrModerator -->
+
 				<!-- IF loggedIn -->
 				<!-- IF !isSelf -->
 				<!-- IF !banned -->
