@@ -22,6 +22,9 @@
 		},
 		{
 			"hook": "filter:user.getSettings", "method": "getSettings"
+		},
+		{
+			"hook": "filter:meta.getLinkTags", "method": "getLinkTags"
 		}
 	],
 	"scripts": [
