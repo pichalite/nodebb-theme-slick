@@ -21,12 +21,12 @@
 		};
 	</script>
 
-	<!-- IF useCustomJS -->
-	{{customJS}}
-	<!-- ENDIF useCustomJS -->
+	<!-- IF useCustomHTML -->
+	{{customHTML}}
+	<!-- END -->
 	<!-- IF useCustomCSS -->
 	<style type="text/css">{{customCSS}}</style>
-	<!-- ENDIF useCustomCSS -->
+	<!-- END -->
 </head>
 
 <body class="{bodyClass} skin-{config.selectedSkin}">
