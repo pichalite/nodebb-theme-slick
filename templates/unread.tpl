@@ -10,11 +10,11 @@
 			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 			<!-- ENDIF loggedIn -->
 		</div>
-		<div class="markread btn-group pull-right bottom-sheet<!-- IF !topics.length --> hidden<!-- ENDIF !topics.length -->">
+		<div component="category/dropdown" class="markread btn-group pull-right bottom-sheet<!-- IF !topics.length --> hidden<!-- ENDIF !topics.length -->">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 				[[unread:mark_as_read]] <span class="caret"></span>
 			</button>
-			<ul class="dropdown-menu" role="menu">
+			<ul component="category/list" class="dropdown-menu" role="menu">
 
 				<li role="presentation">
 					<a id="markSelectedRead" role="menuitem" tabindex="-1" href="#">[[unread:selected]]</a>
@@ -25,7 +25,7 @@
 				</li>
 				<li class="divider"></li>
 				<!-- BEGIN categories -->
-				<li role="presentation" class="category" data-cid="{categories.cid}">
+				<li role="presentation" class="category" data-cid="{categories.cid}" data-parent-cid="{categories.parentCid}">
 					<a role="menu-item" href="#">{categories.level}<!-- IF categories.icon --><span class="fa-stack"><i style="color: {categories.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
 				</li>
 				<!-- END categories -->

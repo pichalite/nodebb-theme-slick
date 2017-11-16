@@ -127,12 +127,12 @@
 				</div>
 
 				<div class="form-group">
-					<label for="topicsPerPage">[[user:topics_per_page]]</label>
+					<label for="topicsPerPage">[[user:topics_per_page]] ([[user:max_items_per_page, {maxTopicsPerPage}]])</label>
 					<input type="text" class="form-control" data-property="topicsPerPage" value="{settings.topicsPerPage}">
 				</div>
 
 				<div class="form-group">
-					<label for="postsPerPage">[[user:posts_per_page]]</label>
+					<label for="postsPerPage">[[user:posts_per_page]] ([[user:max_items_per_page, {maxPostsPerPage}]])</label>
 					<input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}">
 				</div>
 			</div>
