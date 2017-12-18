@@ -2,7 +2,7 @@
     .dropdown-menu {
         min-width: 250px;
         list-style: none;
-        
+
         .chat-list {
             max-height: 250px;
             overflow: auto;
@@ -13,22 +13,22 @@
                 display: flex;
                 cursor: pointer;
                 color: #333;
-                
+
                 .chat-image {
-					display: flex;
-		            flex: none;
-		            align-items: center;
-		            margin-right: 10px;
+                    display: flex;
+                    flex: none;
+                    align-items: center;
+                    margin-right: 10px;
                 
                     .user-avatar {
                         .user-avatar(30px);
                     }
-                    
+
                     .user-icon {
                         .user-icon(30px, 1.3em);
                     }
                 }
-                
+
                 &.unread {
                     background-color: @primary-color;
                     color: #fff;
@@ -38,12 +38,12 @@
         
         .chat-dropdown-link {
             text-align: center;
-            
+
             a {
                 padding: 5px 0;
             }
         }
-        
+
         .mark-all-read {
             border-top: 1px solid #eaeaea;
             border-bottom: 1px solid #eaeaea;
@@ -85,6 +85,22 @@
         word-wrap: break-word;
         
         .chat-message {
+            transition: opacity .5s ease;
+
+            &.deleted {
+                opacity: 0.3;
+
+                .controls {
+                    [data-action] {
+                        display: none;
+                    }
+
+                    [data-action="restore"] {
+                        display: inline;
+                    }
+                }
+            }
+
             .message-header {
                 
                 .user-avatar {
@@ -122,6 +138,10 @@
             
             .controls {
                 display: none;
+
+                [data-action="restore"] {
+                    display: none;
+                }
             }
             
             &:hover {
