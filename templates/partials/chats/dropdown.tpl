@@ -1,7 +1,7 @@
 <!-- IF rooms.length -->
 <!-- BEGIN rooms -->
 <a data-ajaxify="false" data-roomid="{rooms.roomId}" class="<!-- IF ../unread -->unread<!-- ENDIF ../unread -->">
-	<!-- IF lastUser -->
+	<!-- IF rooms.lastUser -->
 	<div class="chat-image">
 		<!-- IF rooms.lastUser.picture -->
 		<img class="user-avatar" src="{rooms.lastUser.picture}" title="{rooms.lastUser.username}" />
@@ -18,7 +18,7 @@
 		{rooms.usernames}
 		<!-- ENDIF !rooms.groupChat -->
 	</div>
-	<!-- ENDIF lastUser -->
+	<!-- ENDIF rooms.lastUser -->
 </a>
 <!-- END rooms -->
 <!-- ELSE -->
