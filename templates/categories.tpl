@@ -13,7 +13,7 @@
                     <div class="category-icon">
                         <i class="fa fa-fw {categories.icon}"></i>
                     </div>
-                    <a class="category-title" href="{config.relative_path}/category/{categories.slug}" title="{categories.name}">{categories.name}</a>
+                    <!-- IMPORT partials/categories/link.tpl -->
 
                     <div class="category-description">
                         {categories.descriptionParsed}
@@ -25,7 +25,11 @@
                     <!-- BEGIN categories.children -->
                     <div class="subcategory">
                         <i class="fa fa-fw {categories.children.icon} subcategory-icon"></i>
+                        <!-- IF categories.children.link -->
+                        <a class="subcategory-title" href="{categories.children.link}" title="{categories.children.name}">{categories.children.name}</a>
+                        <!-- ELSE -->
                         <a class="subcategory-title" href="{config.relative_path}/category/{categories.children.slug}" title="{categories.children.name}">{categories.children.name}</a>
+                        <!-- ENDIF categories.children.link -->
                     </div>
                     <!-- END categories.children -->
                 </div>
