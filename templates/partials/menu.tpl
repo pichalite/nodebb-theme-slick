@@ -6,17 +6,17 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<!-- IF config.showSiteTitle -->
-				<a href="<!-- IF title:url -->{title:url}<!-- ELSE -->{relative_path}/<!-- ENDIF title:url -->">
-					<span class="navbar-brand forum-title">{title}</span>
-				</a>
-				<!-- ENDIF config.showSiteTitle -->
-
 				<!-- IF brand:logo -->
 				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
 					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}" />
 				</a>
 				<!-- ENDIF brand:logo -->
+
+				<!-- IF config.showSiteTitle -->
+				<a href="<!-- IF title:url -->{title:url}<!-- ELSE -->{relative_path}/<!-- ENDIF title:url -->">
+					<span class="navbar-brand forum-title">{title}</span>
+				</a>
+				<!-- ENDIF config.showSiteTitle -->
 
 			</div>
 
