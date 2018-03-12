@@ -25,14 +25,14 @@
 				<!-- IF config.loggedIn -->
 
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
-					<li class="notifications dropdown text-center hidden-xs" component="notifications">
+					<li class="notifications dropdown text-center hidden-xs open" component="notifications">
 						<a href="#" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown">
 							<i component="notifications/icon" class="fa fa-fw fa-bell-o" data-content="0"></i>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="notif_dropdown">
 							<li>
 								<ul component="notifications/list" class="notification-list">
-									<li><i class="fa fa-refresh fa-spin"></i> [[global:notifications.loading]]</li>
+									<li class="loading-text"><i class="fa fa-refresh fa-spin"></i> [[global:notifications.loading]]</li>
 								</ul>
 							</li>
 							<li class="notif-dropdown-link"><a href="#" class="mark-all-read">[[notifications:mark_all_read]]</a></li>
