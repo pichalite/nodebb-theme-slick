@@ -26,7 +26,7 @@
 				<div class="input-group">
 					<textarea component="chat/input" id="chat-message-input" rows="1" placeholder="[[modules:chat.placeholder]]" name="chat-message" class="form-control" <!-- IF !canReply -->readonly<!-- ENDIF !canReply -->></textarea>
 					<span class="input-group-btn">
-						<button id="chat-message-send-btn" class="btn btn-primary" href="#" type="button" <!-- IF !canReply -->disabled<!-- ENDIF !canReply -->>[[modules:chat.send]]</button>
+						<button id="chat-message-send-btn" class="btn btn-primary" href="#" type="button" <!-- IF !canReply -->disabled<!-- ENDIF !canReply -->><i class="fa fa-fw fa-2x fa-paper-plane"></i></button>
 					</span>
 				</div>
 			</div>

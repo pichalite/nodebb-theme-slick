@@ -32,7 +32,7 @@
 						<ul class="dropdown-menu" aria-labelledby="notif_dropdown">
 							<li>
 								<ul component="notifications/list" class="notification-list">
-									<li><i class="fa fa-refresh fa-spin"></i> [[global:notifications.loading]]</li>
+									<li class="loading-text"><i class="fa fa-refresh fa-spin"></i> [[global:notifications.loading]]</li>
 								</ul>
 							</li>
 							<li class="notif-dropdown-link"><a href="#" class="mark-all-read">[[notifications:mark_all_read]]</a></li>
