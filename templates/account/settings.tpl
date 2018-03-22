@@ -89,18 +89,6 @@
 					</select>
 					<p class="help-block">[[user:digest_description]]</p>
 				</div>
-
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="sendChatNotifications" <!-- IF settings.sendChatNotifications -->checked<!-- ENDIF settings.sendChatNotifications -->/><i class="input-helper"></i> <strong>[[user:send_chat_notifications]]</strong>
-					</label>
-				</div>
-
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="sendPostNotifications" <!-- IF settings.sendPostNotifications -->checked<!-- ENDIF settings.sendPostNotifications -->/><i class="input-helper"></i> <strong>[[user:send_post_notifications]]</strong>
-					</label>
-				</div>
 			</div>
 			<!-- ENDIF !disableEmailSubscriptions -->
 
@@ -166,6 +154,34 @@
 
 			<h4>[[user:notifications_and_sounds]]</h4>
 			<div class="user-setting">
+
+				<!-- BEGIN notificationSettings -->
+				<label>{notificationSettings.label}</label>
+				<div class="row">
+					<div class="form-group col-xs-12">
+						<select class="form-control" data-property="{notificationSettings.name}">
+							<option value="none" <!-- IF notificationSettings.none -->selected<!-- ENDIF notificationSettings.none -->>[[notifications:none]]</option>
+							<option value="notification" <!-- IF notificationSettings.notification -->selected<!-- ENDIF notificationSettings.notification -->>[[notifications:notification_only]]</option>
+							<option value="email" <!-- IF notificationSettings.email -->selected<!-- ENDIF notificationSettings.email -->>[[notifications:email_only]]</option>
+							<option value="notificationemail" <!-- IF notificationSettings.notificationemail -->selected<!-- ENDIF notificationSettings.notificationemail -->>[[notifications:notification_and_email]]</option>
+						</select>
+					</div>
+				</div>
+				<!-- END notificationSettings -->
+
+				<label for="upvote-notif-freq">[[user:upvote-notif-freq]]</label>
+				<div class="row">
+					<div class="form-group col-xs-12">
+						<select class="form-control" id="upvote-notif-freq" name="upvote-notif-freq" data-property="upvoteNotifFreq">
+							<!-- BEGIN upvoteNotifFreq -->
+							<option value="{upvoteNotifFreq.name}" <!-- IF upvoteNotifFreq.selected -->selected<!-- ENDIF upvoteNotifFreq.selected -->>
+								[[user:upvote-notif-freq.{upvoteNotifFreq.name}]]
+							</option>
+							<!-- END upvoteNotifFreq -->
+						</select>
+					</div>
+				</div>
+
 				<label for="notification">[[user:notification-sound]]</label>
 				<div class="row">
 					<div class="form-group col-xs-9">

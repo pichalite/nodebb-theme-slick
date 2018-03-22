@@ -13,20 +13,9 @@
 	<div class="chat-body">
 		<div class="chat-main">
 			<div class="chat-room-name">
-				<!-- IF rooms.groupChat -->
-				<!-- IF rooms.roomName -->{rooms.roomName}<!-- ELSE -->{rooms.usernames}<!-- ENDIF rooms.roomName -->
-				<!-- ELSE -->
-				{rooms.usernames}
-				<!-- ENDIF rooms.groupChat -->
+				<span component="chat/title"><!-- IF rooms.roomName -->{rooms.roomName}<!-- ELSE -->{rooms.usernames}<!-- ENDIF rooms.roomName --></span>
 			</div>
-			<div class="teaser-timestamp timeago pull-right" title="{rooms.teaser.timestampISO}"></div>
 		</div>
-		
-		<div class="chat-secondary">
-			<!-- IF rooms.teaser.content -->
-			<div class="teaser-content">{rooms.teaser.user.username}: {rooms.teaser.content}</div>
-			<!-- ENDIF rooms.teaser.content -->
-			<i class="fa fa-times pull-right leave" component="chat/leave"></i>
-		</div>
+
 	</div>
 </li>

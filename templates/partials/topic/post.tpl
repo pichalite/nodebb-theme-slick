@@ -4,7 +4,7 @@
 			<span class="timeago" title="{posts.timestampISO}"></span>
 		</div>
 		<div class="post-editor pull-left">
-			<i class="fa fa-pencil-square pointer edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
+			<i component="post/edit-indicator" class="fa fa-pencil-square pointer edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
 			<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></small>
 		</div>
 		<!-- IF !reputation:disabled -->
