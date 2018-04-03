@@ -7,7 +7,7 @@
 			[[notifications:outgoing_link_message, {title}]]
 		</h3>
 		
-		<a href="{outgoing}" rel="nofollow">[[notifications:continue_to, {outgoing}]]</a>
+		<a href="{outgoing}" rel="nofollow noopener noreferrer">[[notifications:continue_to, {outgoing}]]</a>
 		</br>
 		<a id="return-btn" href="#" class="btn btn-lg btn-warning">[[notifications:return_to, {title}]]</a>
 	</div>

@@ -65,7 +65,7 @@
 		<div class="col-lg-offset-3 col-lg-7">
 			<div class="alt-logins">
 				<!-- BEGIN authentication -->
-				<div class="{authentication.name}"><a rel="nofollow" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></div>
+				<div class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></div>
 				<!-- END authentication -->
 			</div>
 		</div>
