@@ -1,8 +1,8 @@
 <div class="account">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
-	
+
 	<!-- IMPORT partials/account/menu.tpl -->
-	
+
 	<div class="row">
 		<div class="col-md-2 col-sm-4">
 			<div class="account-picture-block text-center">
@@ -52,7 +52,7 @@
 			<div class="row">
 				<div class="<!-- IF !sso.length -->col-md-12 col-sm-12<!-- ELSE -->col-md-7 col-sm-12<!-- ENDIF !sso.length -->">
 					<form>
-	
+
 						<div class="form-group">
 							<label class="control-label" for="inputFullname">[[user:fullname]]</label>
 							<div class="controls">
@@ -67,25 +67,25 @@
 							</div>
 						</div>
 						<!-- ENDIF allowWebsite -->
-	
+
 						<div class="form-group">
 							<label class="control-label" for="inputLocation">[[user:location]]</label>
 							<div class="controls">
 								<input class="form-control" type="text" id="inputLocation" placeholder="[[user:location]]" value="{location}">
 							</div>
 						</div>
-	
+
 						<div class="form-group">
 							<label class="control-label" for="inputBirthday">[[user:birthday]]</label>
 							<div class="controls">
 								<input class="form-control" id="inputBirthday" value="{birthday}" placeholder="mm/dd/yyyy">
 							</div>
 						</div>
-	
+
 						<div class="form-group">
 							<label class="control-label" for="grouptitle">[[user:grouptitle]]</label>
 							<div class="controls">
-								<select class="form-control" id="groupTitle" data-property="groupTitle">
+								<select class="form-control" id="groupTitle" data-property="groupTitle" <!-- IF allowMultipleBadges --> multiple<!-- ENDIF allowMutlipleBadges -->>
 									<option value="">[[user:no-group-title]]</option>
 									<!-- BEGIN groups -->
 									<!-- IF groups.userTitleEnabled -->
@@ -103,7 +103,7 @@
 							</div>
 						</div>
 						<!-- ENDIF allowAboutMe -->
-						
+
 						<!-- IF allowSignature -->
 						<!-- IF !disableSignatures -->
 						<div class="form-group">
@@ -114,16 +114,16 @@
 						</div>
 						<!-- ENDIF !disableSignatures -->
 						<!-- ENDIF allowSignature -->
-	
+
 						<input type="hidden" id="inputUID" value="{uid}"><br />
-	
+
 						<div class="form-actions">
 							<a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a>
 						</div>
-	
+
 					</form>
 				</div>
-				
+
 				<!-- IF sso.length -->
 				<div class="col-md-5 col-sm-12">
 					<hr class="visible-xs visible-sm" />
