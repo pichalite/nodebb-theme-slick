@@ -40,7 +40,12 @@
 			<br>
 			<!-- IF posts.user.selectedGroup.slug -->
 			<a href="{config.relative_path}/groups/{posts.user.selectedGroup.slug}"><small class="label group-label" style="background-color: {posts.user.selectedGroup.labelColor};"><!-- IF posts.user.selectedGroup.icon --><i class="fa {posts.user.selectedGroup.icon}"></i> <!-- ENDIF posts.user.selectedGroup.icon -->{posts.user.selectedGroup.userTitle}</small></a>
+			<br>
 			<!-- ENDIF posts.user.selectedGroup.slug -->
+			<i class="fa fa-star"></i>
+			<span class="formatted-number">{posts.user.reputation}</span>
+			<i class="fa fa-pencil"></i>
+			<span class="formatted-number">{posts.user.postcount}</span>
 		</div>
 	</div>
 	<div class="col-sm-10 col-md-10 col-lg-10 post-content" component="post/content">
