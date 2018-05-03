@@ -2,6 +2,16 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<div class="row">
+		<!-- IF alternate_logins -->
+		<div class="col-lg-offset-2 col-lg-10">
+			<div class="alt-logins">
+				<!-- BEGIN authentication -->
+				<div class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></div>
+				<!-- END authentication -->
+			</div>
+		</div>
+		<!-- ENDIF alternate_logins -->
+
 		<!-- IF allowLocalLogin -->
 		<div class="col-md-12">
 			<div class="login-block">
@@ -52,14 +62,6 @@
 		</div>
 		<!-- ENDIF allowLocalLogin -->
 
-		<!-- IF alternate_logins -->
-		<div class="col-lg-offset-2 col-lg-10">
-			<div class="alt-logins">
-				<!-- BEGIN authentication -->
-				<div class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></div>
-				<!-- END authentication -->
-			</div>
-		</div>
-		<!-- ENDIF alternate_logins -->
+
 	</div>
 </div>
