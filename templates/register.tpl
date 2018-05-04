@@ -1,8 +1,20 @@
 <div class="register">
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
+
+
 	<div class="row">
-		<div class="col-md-12">
+        <!-- IF alternate_logins -->
+        <div class="col-lg-12">
+            <div class="alt-logins">
+                <!-- BEGIN authentication -->
+                <div class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></div>
+                <!-- END authentication -->
+            </div>
+        </div>
+        <!-- ENDIF alternate_logins -->
+        
+		<div class="col-lg-12">
 			<div class="register-block">
 				<div class="alert alert-danger<!-- IF !error --> hidden<!-- ENDIF !error -->" id="register-error-notify" >
 					<strong>[[error:registration-error]]</strong>
@@ -60,15 +72,5 @@
 				</form>
 			</div>
 		</div>
-
-		<!-- IF alternate_logins -->
-		<div class="col-lg-offset-3 col-lg-7">
-			<div class="alt-logins">
-				<!-- BEGIN authentication -->
-				<div class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></div>
-				<!-- END authentication -->
-			</div>
-		</div>
-		<!-- ENDIF alternate_logins -->
 	</div>
 </div>
