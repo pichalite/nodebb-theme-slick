@@ -8,7 +8,7 @@
 
 				<!-- IF brand:logo -->
 				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
-					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}" />
+					<img class="logo" alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}" />
 				</a>
 				<!-- ENDIF brand:logo -->
 
