@@ -29,7 +29,7 @@
 	<!-- END -->
 </head>
 
-<body class="{bodyClass} skin-{config.selectedSkin}">
+<body class="{bodyClass} theme-{config.selectedSkin}">
 	<nav id="menu" class="hidden">
 		<section class="menu-profile">
 			<!-- IF user.uid -->
