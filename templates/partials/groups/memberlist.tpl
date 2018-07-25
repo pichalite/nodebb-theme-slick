@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row member-search">
 	<!-- IF group.isOwner -->
 	<div class="col-lg-2">
 		<button component="groups/members/add" type="button" class="btn btn-primary" title="[[groups:details.add-member]]"><i class="fa fa-user-plus"></i></button>
