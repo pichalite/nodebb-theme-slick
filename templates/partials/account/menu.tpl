@@ -17,13 +17,12 @@
 					<!-- IF !isSelf -->
 					<!-- IF !banned -->
 					<!-- IF !config.disableChat -->
-					<li>
-						<a component="account/chat" href="#">[[user:chat_with, {username}]]</a>
-					</li>
+					<li><a component="account/chat" href="#">[[user:chat_with, {username}]]</a></li>
 					<!-- ENDIF !config.disableChat -->
 
+					<li><a component="account/flag" href="#">[[user:flag-profile]]</a></li>
 					<li>
-						<a component="account/flag" href="#">[[user:flag-profile]]</a>
+						<a component="account/block" href="#"><!-- IF !../isBlocked -->[[user:block_user]]<!-- ELSE -->[[user:unblock_user]]<!-- END --></a>
 					</li>
 					<li class="divider"></li>
 					<!-- ENDIF !banned -->
@@ -41,19 +40,17 @@
 					</li>
 					<!-- ENDIF canBan -->
 					<!-- IF isAdmin -->
-					<li>
-						<a component="account/delete" href="#" class="">[[user:delete_account]]</a>
-					</li>
+					<li><a component="account/delete" href="#" class="">[[user:delete_account]]</a></li>
 					<!-- ENDIF isAdmin -->
+					<li class="divider"></li>
 					<!-- ENDIF !isSelf -->
 
-					<!-- IF showHidden -->
-					<li><a href="{config.relative_path}/user/{userslug}/info">[[user:account_info]] <i class="fa fa-lock"></i></a></li>
-					<!-- ENDIF showHidden -->
 
-					<li class="divider"></li>
 					<li><a href="{config.relative_path}/user/{userslug}/following">[[user:following]]</a></li>
 					<li><a href="{config.relative_path}/user/{userslug}/followers">[[user:followers]]</a></li>
+					<!-- IF showHidden -->
+					<li><a href="{config.relative_path}/user/{userslug}/blocks">[[user:blocks]]</a></li>
+					<!-- ENDIF showHidden -->
 					<li class="divider"></li>
 					<li><a href="{config.relative_path}/user/{userslug}/topics">[[global:topics]]</a></li>
 					<li><a href="{config.relative_path}/user/{userslug}/posts">[[global:posts]]</a></li>
@@ -72,13 +69,14 @@
 					<li><a href="{config.relative_path}/user/{userslug}/downvoted">[[global:downvoted]]</a></li>
 					<!-- ENDIF !downvote:disabled -->
 					<!-- ENDIF !reputation:disabled -->
+					<li><a href="{config.relative_path}/user/{userslug}/uploads">[[global:uploads]]</a></li>
 					<!-- ENDIF showHidden -->
 
 					<!-- BEGIN profile_links -->
 					<!-- IF @first -->
 					<li class="divider"></li>
 					<!-- ENDIF @first -->
-					<li id="{profile_links.id}" class="plugin-link <!-- IF profile_links.public -->public<!-- ELSE -->private<!-- ENDIF profile_links.public -->"><a href="{config.relative_path}/user/{userslug}/{profile_links.route}"><i class="fa fa-fw {profile_links.icon}"></i> {profile_links.name}</a></li>
+					<li id="{profile_links.id}" class="plugin-link <!-- IF profile_links.public -->public<!-- ELSE -->private<!-- ENDIF profile_links.public -->"><a href="{config.relative_path}/user/{userslug}/{profile_links.route}"><!-- IF profile_links.icon --><i class="fa fa-fw {profile_links.icon}"></i> <!-- ENDIF profile_links.icon -->{profile_links.name}</a></li>
 					<!-- END profile_links -->
 				</ul>
 			</li>
