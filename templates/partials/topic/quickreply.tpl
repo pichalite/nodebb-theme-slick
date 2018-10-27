@@ -1,4 +1,4 @@
-<!-- IF loggedIn -->
+<!-- IF privileges.topics:reply -->
 <div class="row quick-reply">
     <div class="col-sm-2 hidden-xs reply-user">
     	<a href="<!-- IF loggedInUser.userslug -->{config.relative_path}/user/{loggedInUser.userslug}<!-- ELSE -->#<!-- ENDIF loggedInUser.userslug -->">
@@ -19,4 +19,4 @@
 	</div>
 	<button component="topic/quickreply/button" class="btn btn-primary">Post quick reply</button>
 </div>
-<!-- ENDIF loggedIn -->
+<!-- ENDIF privileges.topics:reply -->
