@@ -27,7 +27,7 @@
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
 					<li class="notifications dropdown text-center hidden-xs" component="notifications">
 						<a href="#" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown">
-							<i component="notifications/icon" class="fa fa-fw fa-bell-o" data-content="0"></i>
+							<i component="notifications/icon" class="fa fa-fw fa-bell-o" data-content="{unreadCount.notification}"></i>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="notif_dropdown">
 							<li>
@@ -210,7 +210,7 @@
 					<li class="{navigation.class}">
 						<a class="navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
 							<!-- IF navigation.iconClass -->
-							<i class="fa fa-fw {navigation.iconClass}"></i>
+							<i class="fa fa-fw {navigation.iconClass}" data-content="{navigation.content}"></i>
 							<!-- ENDIF navigation.iconClass -->
 
 							<!-- IF navigation.text -->
