@@ -1,6 +1,6 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="row">
-	<div class="topic col-lg-12 col-sm-12" has-widget-class="topic col-lg-9 col-sm-12" has-widget-target="sidebar">
+	<div class="topic col-lg-12 col-sm-12" data-has-widget-class="topic col-lg-9 col-sm-12" data-has-widget-target="sidebar">
 
 		<h1 component="post/header" class="hidden-xs">
 			<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="[[topic:pinned]]"></i>
