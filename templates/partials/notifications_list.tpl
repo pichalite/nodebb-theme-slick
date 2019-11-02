@@ -4,7 +4,7 @@
 <!-- ENDIF !notifications.length -->
 
 <!-- BEGIN notifications -->
-<li class="{notifications.readClass}" data-nid="{notifications.nid}" data-path="{config.relative_path}{notifications.path}" <!-- IF notifications.pid --> data-pid="{notifications.pid}"<!-- ENDIF notifications.pid --><!-- IF notifications.tid --> data-tid="{notifications.tid}"<!-- ENDIF notifications.tid -->>
+<li class="{notifications.readClass}" data-nid="{notifications.nid}" data-path="{notifications.path}" <!-- IF notifications.pid --> data-pid="{notifications.pid}"<!-- ENDIF notifications.pid --><!-- IF notifications.tid --> data-tid="{notifications.tid}"<!-- ENDIF notifications.tid -->>
 	<div class="mark-read" aria-label="Mark Read"></div>
 	<span class="relTime">{notifications.timeago}</span>
 
@@ -19,7 +19,7 @@
 	</div>
 
 	<div class="notification-msg">
-		<a href="{config.relative_path}{notifications.path}">
+		<a href="{notifications.path}">
 			{notifications.bodyShort}
 		</a>
 	</div>

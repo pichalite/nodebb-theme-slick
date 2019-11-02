@@ -43,7 +43,7 @@
 				<!-- ENDIF notifications.image -->
 			</div>
 			<div class="notification-msg">
-				<a component="notifications/item/link" href="{config.relative_path}{notifications.path}">{notifications.bodyShort}</a>
+				<a component="notifications/item/link" href="{notifications.path}">{notifications.bodyShort}</a>
 
 				<span class="timeago" title="{notifications.datetimeISO}"></span>
 			</div>
