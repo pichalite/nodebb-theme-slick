@@ -157,9 +157,8 @@
 				<!-- ENDIF isAdmin -->
 			</div>
 
-			<h4>[[user:notifications_and_sounds]]</h4>
+			<h4>[[user:notifications]]</h4>
 			<div class="user-setting">
-
 				<!-- BEGIN notificationSettings -->
 				<label>{notificationSettings.label}</label>
 				<div class="row">
@@ -186,53 +185,6 @@
 						</select>
 					</div>
 				</div>
-
-				<label for="notification">[[user:notification-sound]]</label>
-				<div class="row">
-					<div class="form-group col-xs-9">
-						<select class="form-control" id="notification" name="notification" data-property="notificationSound">
-							<option value="">[[user:no-sound]]</option>
-							<!-- BEGIN notificationSound -->
-							<option value="{notificationSound.name}" <!-- IF notificationSound.selected -->selected<!-- ENDIF notificationSound.selected -->>{notificationSound.name}</option>
-							<!-- END notificationSound -->
-						</select>
-					</div>
-					<div class="btn-group col-xs-3">
-						<button type="button" class="form-control btn btn-sm btn-default" data-action="play"><span class="hidden-xs">[[global:play]] </span><i class="fa fa-play"></i></button>
-					</div>
-				</div>
-
-				<!-- IF !config.disableChat -->
-				<label for="chat-incoming">[[user:incoming-message-sound]]</label>
-				<div class="row">
-					<div class="form-group col-xs-9">
-						<select class="form-control" id="chat-incoming" name="chat-incoming" data-property="incomingChatSound">
-							<option value="">[[user:no-sound]]</option>
-							<!-- BEGIN incomingChatSound -->
-							<option value="{incomingChatSound.name}" <!-- IF incomingChatSound.selected -->selected<!-- ENDIF incomingChatSound.selected -->>{incomingChatSound.name}</option>
-							<!-- END incomingChatSound -->
-						</select>
-					</div>
-					<div class="btn-group col-xs-3">
-						<button type="button" class="form-control btn btn-sm btn-default" data-action="play"><span class="hidden-xs">[[global:play]] </span><i class="fa fa-play"></i></button>
-					</div>
-				</div>
-
-				<label for="chat-outgoing">[[user:outgoing-message-sound]]</label>
-				<div class="row">
-					<div class="form-group col-xs-9">
-						<select class="form-control" id="chat-outgoing" name="chat-outgoing" data-property="outgoingChatSound">
-							<option value="">[[user:no-sound]]</option>
-							<!-- BEGIN outgoingChatSound -->
-							<option value="{outgoingChatSound.name}" <!-- IF outgoingChatSound.selected -->selected<!-- ENDIF outgoingChatSound.selected -->>{outgoingChatSound.name}</option>
-							<!-- END outgoingChatSound -->
-						</select>
-					</div>
-					<div class="btn-group col-xs-3">
-						<button type="button" class="form-control btn btn-sm btn-default" data-action="play"><span class="hidden-xs">[[global:play]] </span><i class="fa fa-play"></i></button>
-					</div>
-				</div>
-				<!-- ENDIF !config.disableChat -->
 			</div>
 
 			<!-- BEGIN customSettings -->
