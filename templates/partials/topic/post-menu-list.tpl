@@ -59,9 +59,6 @@
 	</a>
 </li>
 <!-- END posts.tools -->
-<!-- IF posts.toolsVisible -->
-<li role="presentation" class="divider"></li>
-<!-- ENDIF posts.toolsVisible -->
 
 <!-- IF !posts.deleted -->
 <!-- IF config.loggedIn -->
@@ -95,4 +92,9 @@
 	</a>
 </li>
 <!-- ENDIF posts.display_flag_tools -->
+<!-- IF posts.display_moderator_tools -->
+{{{ if posts.flags.exists }}}
+<li><a role="menuitem" tabindex="-1" href="{config.relative_path}/flags/{posts.flags.flagId}"><i class="fa fa-fw fa-exclamation-circle"></i> [[topic:view-flag-report]]</a></li>
+{{{ end }}}
+<!-- ENDIF posts.display_moderator_tools -->
 <!-- ENDIF !posts.deleted -->
