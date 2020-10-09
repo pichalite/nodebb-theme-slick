@@ -10,6 +10,7 @@
     <!-- ENDIF topics.length -->
     <!-- BEGIN topics -->
     <div component="category/topic" class="row category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
+		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 		<meta itemprop="name" content="{function.stripTags, title}">
 		<div class="col-md-8 col-xs-12">
 			<!-- IF showSelect -->
