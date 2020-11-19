@@ -60,7 +60,7 @@
             		</a>
 
             		<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">
-            		    {../user.username}
+            		    {../user.displayname}
             			<small class="timeago" title="{../timestampISO}"></small>
             		</a>
         		</div>

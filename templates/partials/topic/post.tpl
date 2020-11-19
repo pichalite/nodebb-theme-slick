@@ -35,7 +35,7 @@
 		</a>
 		<div class="author">
 			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
-			{posts.user.username}
+			{posts.user.displayname}
 		</a>
 		<!-- BEGIN posts.user.selectedGroups -->
 			<br>

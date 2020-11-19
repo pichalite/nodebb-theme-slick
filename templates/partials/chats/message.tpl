@@ -7,7 +7,7 @@
 			<div class="user-icon" style="background-color: {messages.fromUser.icon:bgColor};">{messages.fromUser.icon:text}</div>
 			<!-- ENDIF messages.fromUser.picture -->
 		</a>
-		<strong><span class="chat-user"><a href="{config.relative_path}/user/{messages.fromUser.userslug}">{messages.fromUser.username}</a></span></strong>
+		<strong><span class="chat-user"><a href="{config.relative_path}/user/{messages.fromUser.userslug}">{messages.fromUser.displayname}</a></span></strong>
 		<!-- IF ../fromUser.banned -->
 		<span class="label label-danger">[[user:banned]]</span>
 		<!-- END -->

@@ -45,7 +45,7 @@
 				<!-- ENDIF !topics.noAnchor -->
 
 				<small>
-					<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.username}</a> &bull; <span class="timeago" title="{topics.timestampISO}"></span>
+					<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.displayname}</a> &bull; <span class="timeago" title="{topics.timestampISO}"></span>
 				</small>
     		</div>
 		</div>
@@ -73,7 +73,7 @@
 				<div title="{topics.teaser.user.username}" class="user-icon" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</div>
 				<!-- ENDIF topics.teaser.user.picture -->
 
-				<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{topics.teaser.user.username}</a>
+				<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{topics.teaser.user.displayname}</a>
 				<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 					<span class="timeago" title="{topics.teaser.timestampISO}"></span>
 				</a>
