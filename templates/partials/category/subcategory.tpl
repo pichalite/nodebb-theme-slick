@@ -1,8 +1,9 @@
+{{{ if children.length }}}
 <div class="subcategory">
-	<!-- IF children.length --><p>[[category:subcategories]]</p><!-- ENDIF children.length -->
+	<p>[[category:subcategories]]</p>
 
-	<div class="categories" itemscope itemtype="http://www.schema.org/ItemList">
-		<!-- BEGIN children -->
+	<div component="category/subcategory/container" class="categories" itemscope itemtype="http://www.schema.org/ItemList">
+		{{{each children}}}
 		<div class="row" component="categories/category" data-cid="{children.cid}" data-numRecentReplies="1">
 		    <div class="col-md-8 col-xs-12">
 		        <div class="category-info">
@@ -53,6 +54,10 @@
 			    </div>
 		    </div>
 		</div>
-		<!-- END children -->
+		{{{end}}}
 	</div>
+	{{{ if hasMoreSubCategories}}}
+	<button class="btn btn-default" component="category/load-more-subcategories">[[category:x-more-categories, {subCategoriesLeft}]]</button>
+	{{{ end }}}
 </div>
+{{{ end }}}

@@ -74,4 +74,5 @@
         </div>
     </div>
     <!-- END categories -->
+    <!-- IMPORT partials/paginator.tpl -->
 </div>
