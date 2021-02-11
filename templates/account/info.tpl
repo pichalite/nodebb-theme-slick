@@ -21,9 +21,11 @@
 					</div>
 					{../browser} {../version} on {../platform}<br />
 					<small class="timeago text-muted" title="{../datetimeISO}"></small>
+                                        <!-- IF isSelforAdmin -->
 					<ul>
 						<li><strong>[[global:ip_address]]</strong>: {../ip}</li>
 					</ul>
+                                        <!-- ENDIG isSelforAdmin -->
 				</li>
 				<!-- END sessions -->
 			</ul>
@@ -33,6 +35,7 @@
 
 	<div class="row">
 		<div class="col-sm-6">
+                        <!-- IF isAdmin -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title">[[global:recentips]]</h3>
@@ -45,6 +48,7 @@
 					</ul>
 				</div>
 			</div>
+                        <!-- ENDIF isAdmin -->
 
 			<div class="panel panel-default">
 				<div class="panel-heading">

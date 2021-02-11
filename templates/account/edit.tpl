@@ -3,7 +3,7 @@
 
 	<!-- IMPORT partials/account/menu.tpl -->
 
-	<div class="row">
+	<div class="row semitransparent-card">
 		<div class="col-md-2 col-sm-4">
 			<div class="account-picture-block text-center">
 				<div class="row">

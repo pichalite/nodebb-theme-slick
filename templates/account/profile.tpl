@@ -1,7 +1,7 @@
-<div class="account">
+<div class="account semitransparent-card">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
-	<div class="profile row">
+	<div class="profile  row">
 		<div class="col-xs-12">
 			<div class="user-info" data-uid="{uid}">
 				<!-- IF picture -->
@@ -129,7 +129,56 @@
 			</div>
 		</div>
 	</div>
+<!--
+        <div class="row">
+            <div class="col-xs-6">
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                            <h3 class="panel-title">
 
+                                    [[user:info.ban-history]]
+
+                                    <!-- IF isAdminOrGlobalModerator -->
+                                    <!-- IF !banned -->
+                                    <!-- IF !isSelf -->
+                                    <button class="btn btn-xs pull-right btn-danger" component="account/ban">[[user:ban_account]]</button>
+                                    <!-- ENDIF !isSelf -->
+                                    <!-- ELSE -->
+                                    <!-- IF !isSelf -->
+                                    <button class="btn btn-xs pull-right btn-success" component="account/unban">[[user:unban_account]]</button>
+                                    <!-- ENDIF !isSelf -->
+                                    <!-- ENDIF !banned -->
+                                    <!-- ENDIF isAdminOrGlobalModerator -->
+                            </h3>
+                    </div>
+                    <div class="panel-body">
+                            <!-- IF history.bans.length -->
+                            <ul class="ban-history">
+                                    <!-- BEGIN history.bans -->
+                                    <li>
+                                            <p>
+                                                    <span class="timestamp timeago" title="{../timestampISO}"></span> &mdash; {../timestampReadable}<br />
+                                                    <!-- IF ../until -->
+                                                    <span class="expiry">[[user:info.banned-until, {../untilReadable}]]</span><br />
+                                                    <!-- ELSE -->
+                                                    <span class="expiry">[[user:info.banned-permanently]]</span><br />
+                                                    <!-- ENDIF ../until -->
+                                                    <span class="reason"><strong>[[user:info.banned-reason-label]]</strong>: {../reason}</span>
+                                            </p>
+                                    </li>
+                                    <!-- END history.bans -->
+                            </ul>
+                            <!-- ELSE -->
+                            <div class="alert alert-success">[[user:info.no-ban-history]]</div>
+                            <!-- ENDIF history.bans.length -->
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                </div>
+            </div>
+            
+        </div>
+-->
 	<div class="row">
 		<div class="col-xs-6">
 			<h1 class="section-title">[[pages:account/best, {username}]]</h1>

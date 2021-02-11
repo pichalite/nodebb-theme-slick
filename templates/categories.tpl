@@ -6,7 +6,7 @@
         <div class="col-md-2"><div class="header-title">Last Post</div></div>
     </div>
     <!-- BEGIN categories -->
-    <div class="row" component="categories/category" data-cid="{categories.cid}" data-numRecentReplies="1">
+    <div class="row category-row" component="categories/category" data-cid="{categories.cid}" data-numRecentReplies="1">
         <div class="col-md-8 col-xs-12">
             <div class="category-info">
                 <div class="category-info-content">
@@ -49,22 +49,29 @@
         <div class="col-md-2 hidden-xs hidden-sm">
             <div class="teaser" component="topic/teaser">
                 <!-- BEGIN posts -->
+                <div class="card">
         	    <!-- IF @first -->
-                <div component="category/posts">
-                    <a href="{config.relative_path}/user/{../user.userslug}">
-                		<!-- IF ../user.picture -->
-                		<img class="user-avatar" title="{../user.username}" alt="{../user.username}" src="{../user.picture}" />
-                		<!-- ELSE -->
-                		<div class="user-icon" title="{../user.username}" style="background-color: {../user.icon:bgColor};">{../user.icon:text}</div>
-                		<!-- ENDIF ../user.picture -->
-            		</a>
+                    <div component="category/posts">
+                        <a class="background-link" href="{config.relative_path}/topic/{../topic.slug}<!--IF ../index -->/{../index}<!-- ENDIF ../index -->"></a>
+                                <a href="{config.relative_path}/user/{../user.userslug}">
+                                    <!-- IF ../user.picture -->
+                                    <img class="user-avatar" title="{../user.username}" alt="{../user.username}" src="{../user.picture}" />
+                                    <!-- ELSE -->
+                                    <div class="user-icon" title="{../user.username}" style="background-color: {../user.icon:bgColor};">{../user.icon:text}</div>
+                                    <!-- ENDIF ../user.picture -->
+                            </a>
 
-            		<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">
-            		    {../user.displayname}
-            			<small class="timeago" title="{../timestampISO}"></small>
-            		</a>
-        		</div>
+                            <a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">
+                                {../user.displayname}
+                                    <small class="timeago" title="{../timestampISO}"></small>
+                            </a>
+                            <p></p>
+                            <div class="post-content">
+                                En: {../topic.title}
+                            </div>
+                        </div>
         		<!-- ENDIF @first -->
+                </div>
         	    <!-- END posts -->
 
         	    <!-- IF !../posts.length -->

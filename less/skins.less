@@ -2,8 +2,32 @@
 @primary-color-dark: #2A9FD6;
 body {
     &.theme-dark {
-        color: #888;
+        color: #dfdfdf;
         background-color: lighten(#060606, 10%);
+        background: url("/plugins/nodebb-theme-slick/images/patronfin-darkfin-500px.png");
+
+        .composer{
+            background: black;
+            .write {
+                background-color: #222;
+                border: 0;
+            }
+            .preview {
+                background-color: #222;
+                border: 0;
+            }
+        }
+
+        .semitransparent-card {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .login {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .recent-cards .recent-card .bg {
+            background-color: #222 !important;
+        }
 
         a {
             color: @primary-color-dark;
@@ -13,9 +37,18 @@ body {
             color: @primary-color-dark;
         }
 
-        .categories .category-info .category-info-content .category-title {
+        .categories {
             color: inherit;
+
+            .category-row {
+                 background: rgba(255, 255, 255, 0.2);
+             }
+            .category-info .category-info-content .category-title {
+                color: inherit;
+            }
         }
+
+
 
         .bg-primary {
           color: #fff;
@@ -499,6 +532,11 @@ body {
             padding: 8px 15px;
             background-color: #222;
         }
+
+        .topic {
+            background-color: #222;
+        }
+
         .breadcrumb > li + li:before {
             color: #fff;
         }
@@ -1149,6 +1187,8 @@ body {
             }
 
             [component="category/topic"] {
+                background: rgba(255, 255, 255, 0.2);
+                color: inherit;
                 .title {
                     a {
                         color: inherit;

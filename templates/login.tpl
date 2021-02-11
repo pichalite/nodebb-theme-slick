@@ -2,9 +2,26 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<div class="row">
+		<!-- IF alternate_logins -->
+		<div class="col-lg-6">
+			<div class="alt-logins">
+                                <h3> Opciones de inicio de sesión </h3>
+                                <button color="white" class="btn login-alt login-google" onclick="location.href='https://vtubeando.net/auth/google';"><i class="fa fa-google"></i><span>Iniciar Sesión con Google</span></button>
+                                <button color="white" class="btn login-alt login-twitter"><i class="fa fa-twitter"></i><span>Iniciar Sesión con Twitter</span></button>
+                                <button color="white" class="btn login-alt login-discord"><img src="/plugins/nodebb-theme-slick/images/Discord-Logo-White.svg"><span>Iniciar Sesión con Discord</span></button>
+                        <!--
+				<!-- BEGIN authentication -->
+				<div class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></div>
+				<!-- END authentication -->
+                        -->
+			</div>
+		</div>
+		<!-- ENDIF alternate_logins -->
+
 		<!-- IF allowLocalLogin -->
-		<div class="col-md-12">
+		<div class="col-lg-6">
 			<div class="login-block">
+                                <h3> Inicio de sesión de admins </h3>
 				<div class="alert alert-danger" id="login-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
 					<strong>[[login:failed_login_attempt]]</strong>
@@ -52,14 +69,5 @@
 		</div>
 		<!-- ENDIF allowLocalLogin -->
 
-		<!-- IF alternate_logins -->
-		<div class="col-lg-offset-2 col-lg-10">
-			<div class="alt-logins">
-				<!-- BEGIN authentication -->
-				<div class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></div>
-				<!-- END authentication -->
-			</div>
-		</div>
-		<!-- ENDIF alternate_logins -->
 	</div>
 </div>
