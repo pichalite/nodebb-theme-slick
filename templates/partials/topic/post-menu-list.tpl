@@ -86,11 +86,14 @@
 
 	<!-- IF posts.display_flag_tools -->
 	<li role="presentation" class="divider"></li>
-	<li role="presentation">
-		<a component="post/flag" role="menuitem" tabindex="-1" href="#">
-			[[topic:flag_title]]
-		</a>
-	</li>
+	{{{ if !posts.flags.flagged }}}
+	<li><a component="post/flag" role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:flag-post]]</a></li>
+	{{{ if (!posts.selfPost && posts.uid) }}}
+	<li><a component="post/flagUser" role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:flag-user]]</a></li>
+	{{{ end }}}
+	{{{ else }}}
+	<li class="disabled text-muted"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-fw fa-flag"></i> [[topic:already-flagged]]</li>
+	{{{ end }}}
 	<!-- ENDIF posts.display_flag_tools -->
 	<!-- IF posts.display_moderator_tools -->
 	{{{ if posts.flags.exists }}}
