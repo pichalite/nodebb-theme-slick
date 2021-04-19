@@ -40,7 +40,11 @@
 					</li>
 					<!-- ENDIF canBan -->
 					<!-- IF isAdmin -->
-					<li><a component="account/delete" href="#" class="">[[user:delete_account]]</a></li>
+					<li>
+						<a component="account/delete-account" href="#" class="">[[user:delete_account_as_admin]]</a>
+						<a component="account/delete-content" href="#" class="">[[user:delete_content]]</a>
+						<a component="account/delete-all" href="#" class="">[[user:delete_all]]</a>
+					</li>
 					<!-- ENDIF isAdmin -->
 					<li class="divider"></li>
 					<!-- ENDIF !isSelf -->
