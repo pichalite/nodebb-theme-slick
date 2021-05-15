@@ -53,19 +53,19 @@
 		<div class="col-md-10 col-sm-8">
 			<div class="row">
 				<div class="<!-- IF !sso.length -->col-md-12 col-sm-12<!-- ELSE -->col-md-7 col-sm-12<!-- ENDIF !sso.length -->">
-					<form>
+					<form component="profile/edit/form">
 
 						<div class="form-group">
 							<label class="control-label" for="inputFullname">[[user:fullname]]</label>
 							<div class="controls">
-								<input class="form-control" type="text" id="inputFullname" placeholder="[[user:fullname]]" value="{fullname}">
+								<input class="form-control" type="text" id="inputFullname" placeholder="[[user:fullname]]" value="{fullname}" name="fullname">
 							</div>
 						</div>
 						<!-- IF allowWebsite -->
 						<div class="form-group">
 							<label class="control-label" for="inputWebsite">[[user:website]]</label>
 							<div class="controls">
-								<input class="form-control" type="text" id="inputWebsite" placeholder="http://..." value="{website}">
+								<input class="form-control" type="text" id="inputWebsite" placeholder="http://..." value="{website}" name="website">
 							</div>
 						</div>
 						<!-- ENDIF allowWebsite -->
@@ -73,21 +73,21 @@
 						<div class="form-group">
 							<label class="control-label" for="inputLocation">[[user:location]]</label>
 							<div class="controls">
-								<input class="form-control" type="text" id="inputLocation" placeholder="[[user:location]]" value="{location}">
+								<input class="form-control" type="text" id="inputLocation" placeholder="[[user:location]]" value="{location}" name="location">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="control-label" for="inputBirthday">[[user:birthday]]</label>
 							<div class="controls">
-								<input class="form-control" id="inputBirthday" value="{birthday}" placeholder="mm/dd/yyyy">
+								<input class="form-control" id="inputBirthday" value="{birthday}" placeholder="mm/dd/yyyy" name="birthday>
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label class="control-label" for="grouptitle">[[user:grouptitle]]</label>
 							<div class="controls">
-								<select class="form-control" id="groupTitle" data-property="groupTitle" <!-- IF allowMultipleBadges --> multiple<!-- ENDIF allowMultipleBadges -->>
+								<select class="form-control" id="groupTitle" data-property="groupTitle" name="groupTitle" <!-- IF allowMultipleBadges --> multiple<!-- ENDIF allowMultipleBadges -->>
 									<option value="">[[user:no-group-title]]</option>
 									<!-- BEGIN groups -->
 									<!-- IF groups.userTitleEnabled -->
@@ -101,7 +101,7 @@
 						<div class="form-group">
 							<label class="control-label" for="inputAboutMe">[[user:aboutme]]</label> <small><label id="aboutMeCharCountLeft"></label></small>
 							<div class="controls">
-								<textarea class="form-control" id="inputAboutMe" rows="5">{aboutme}</textarea>
+								<textarea class="form-control" id="inputAboutMe" rows="5" name="aboutme">{aboutme}</textarea>
 							</div>
 						</div>
 						<!-- ENDIF allowAboutMe -->
@@ -111,7 +111,7 @@
 						<div class="form-group">
 							<label class="control-label" for="inputSignature">[[user:signature]]</label> <small><label id="signatureCharCountLeft"></label></small>
 							<div class="controls">
-								<textarea class="form-control" id="inputSignature" rows="5">{signature}</textarea>
+								<textarea class="form-control" id="inputSignature" rows="5" name="signature">{signature}</textarea>
 							</div>
 						</div>
 						<!-- ENDIF !disableSignatures -->
