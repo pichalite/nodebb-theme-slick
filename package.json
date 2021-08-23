@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-slick",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "nbbpm": {
     "compatibility": "^1.17.0"
   },
