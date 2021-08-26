@@ -1,7 +1,7 @@
 <div class="row post-header">
 	<div class="col-xs-12">
 		<div class="post-time pull-left">
-			<span class="timeago" title="{posts.timestampISO}"></span>
+			<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago" title="{posts.timestampISO}"></span></a>
 		</div>
 		<div class="post-editor pull-left">
 			<i component="post/edit-indicator" class="fa fa-pencil-square pointer edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
