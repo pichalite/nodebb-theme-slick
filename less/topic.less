@@ -93,6 +93,28 @@
             h1 {
                 margin-top: 0;
             }
+
+            > blockquote {
+				> blockquote {
+					> *:not(.blockquote) {
+						display: none;
+					}
+				}
+
+				> blockquote.uncollapsed {
+					> *:not(.blockquote) {
+							display: block;
+					}
+				}
+			}
+            .toggle {
+				padding: 0px 5px;
+				border: 1px solid #e0e0e0;
+				background: #fcfcfc;
+				width: 50px;
+				text-align: center;
+				display:block!important;
+			}
         }
 
         .post-signature {
