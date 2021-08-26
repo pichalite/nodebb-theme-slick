@@ -135,7 +135,7 @@
 			<h1 class="section-title">[[pages:account/best, {username}]]</h1>
 
 			<!-- IF !bestPosts.length -->
-			<div class="alert alert-warning">[[user:has_no_posts]]</div>
+			<div class="alert alert-warning">[[user:has_no_best_posts]]</div>
 			<!-- ENDIF !bestPosts.length -->
 
 			<div component="posts" class="posts-list">
