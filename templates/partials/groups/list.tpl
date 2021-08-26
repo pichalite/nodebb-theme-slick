@@ -6,7 +6,7 @@
 			</a>
 			<div class="panel-body">
 				<ul class="members">
-					<!-- BEGIN members -->
+					{{{each groups.members}}}
 					<li>
 						<a href="{config.relative_path}/user/{groups.members.userslug}">
 							<!-- IF groups.members.picture -->
@@ -16,7 +16,7 @@
 							<!-- ENDIF groups.members.picture -->
 						</a>
 					</li>
-					<!-- END members -->
+					{{{end}}}
 					<!-- IF groups.truncated -->
 					<li class="truncated"><i class="fa fa-ellipsis-h"></i></li>
 					<!-- ENDIF groups.truncated -->

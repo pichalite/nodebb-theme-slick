@@ -35,8 +35,8 @@
 		    </div>
 		    <div class="col-md-2 hidden-xs hidden-sm">
 		        <div class="teaser" component="topic/teaser">
-		            <!-- BEGIN posts -->
-		    	    <!-- IF @first -->
+		            {{{ each children.posts }}}
+		    	    {{{ if @first }}}
 
 		    		<!-- IF ../user.picture -->
 		    		<img class="user-avatar" title="{../user.username}" alt="{../user.username}" src="{../user.picture}" title="{../user.username}"/>
@@ -49,8 +49,8 @@
 		    		<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">
 		    			<small class="timeago" title="{../timestampISO}"></small>
 		    		</a>
-		    		<!-- ENDIF @first -->
-		    	    <!-- END posts -->
+		    		{{{ end }}}
+		    	    {{{ end }}}
 
 		    	    <!-- IF !../posts.length -->
 					[[category:no_new_posts]]

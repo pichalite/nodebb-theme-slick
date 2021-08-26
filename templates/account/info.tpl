@@ -40,7 +40,7 @@
 				<div class="panel-body">
 					<ul>
 						<!-- BEGIN ips -->
-						<li>@value</li>
+						<li>{@value}</li>
 						<!-- END ips -->
 					</ul>
 				</div>

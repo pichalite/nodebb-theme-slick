@@ -22,7 +22,7 @@
 
                 <!-- IF !config.hideSubCategories -->
                 <div class="subcategories">
-                    <!-- BEGIN categories.children -->
+                    {{{ each categories.children }}}
                     <div class="subcategory">
                         <i class="fa fa-fw {categories.children.icon} subcategory-icon"></i>
                         <!-- IF categories.children.link -->
@@ -31,7 +31,7 @@
                         <a class="subcategory-title" href="{config.relative_path}/category/{categories.children.slug}" title="{categories.children.name}">{categories.children.name}</a>
                         <!-- ENDIF categories.children.link -->
                     </div>
-                    <!-- END categories.children -->
+                    {{{ end }}}
                 </div>
                 <!-- ENDIF !config.hideSubCategories -->
             </div>
@@ -48,8 +48,8 @@
         </div>
         <div class="col-md-2 hidden-xs hidden-sm">
             <div class="teaser" component="topic/teaser">
-                <!-- BEGIN posts -->
-        	    <!-- IF @first -->
+                {{{ each categories.posts }}}
+                {{{ if @first }}}
                 <div component="category/posts">
                     <a href="{config.relative_path}/user/{../user.userslug}">
                 		<!-- IF ../user.picture -->
@@ -64,8 +64,8 @@
             			<small class="timeago" title="{../timestampISO}"></small>
             		</a>
         		</div>
-        		<!-- ENDIF @first -->
-        	    <!-- END posts -->
+        		{{{ end }}}
+        	    {{{ end }}}
 
         	    <!-- IF !../posts.length -->
     			[[category:no_new_posts]]

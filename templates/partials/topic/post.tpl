@@ -37,12 +37,12 @@
 			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 			{posts.user.displayname}
 		</a>
-		<!-- BEGIN posts.user.selectedGroups -->
+		{{{each posts.user.selectedGroups}}}
 			<br>
 			<!-- IF posts.user.selectedGroups.slug -->
 			<a href="{config.relative_path}/groups/{posts.user.selectedGroups.slug}"><small class="label group-label" style="color:{posts.user.selectedGroups.textColor}; background-color: {posts.user.selectedGroups.labelColor};"><!-- IF posts.user.selectedGroups.icon --><i class="fa {posts.user.selectedGroups.icon}"></i> <!-- ENDIF posts.user.selectedGroups.icon -->{posts.user.selectedGroups.userTitle}</small></a>
 			<!-- ENDIF posts.user.selectedGroups.slug -->
-		<!-- END posts.user.selectedGroups -->
+		{{{ end }}}
 		</div>
 	</div>
 	<div class="col-sm-10 col-md-10 col-lg-10 post-content" component="post/content">
