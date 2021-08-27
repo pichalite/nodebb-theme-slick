@@ -5,7 +5,7 @@
 		<div class="col-md-8 col-xs-12"><div class="header-title">[[global:topics]]</div></div>
 		<div class="col-md-1"><div class="header-title">[[global:posts]]</div></div>
 		<div class="col-md-1"><div class="header-title">[[global:views]]</div></div>
-		<div class="col-md-2"><div class="header-title">Last Reply</div></div>
+		<div class="col-md-2"><div class="header-title">[[global:lastpost]]</div></div>
 	</div>
 	<!-- ENDIF topics.length -->
 	<!-- BEGIN topics -->
