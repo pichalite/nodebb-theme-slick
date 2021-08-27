@@ -59,7 +59,7 @@
 			<ul class="menu-section-list notification-list-mobile" component="notifications/list"></ul>
 			<p class="menu-section-list"><a href="{relative_path}/notifications">[[notifications:see_all]]</a></p>
 		</section>
-
+		{{{ if !config.disableChat }}}
 		<section class="menu-section" data-section="chats">
 			<h3 class="menu-section-title">
 				[[global:header.chats]]
@@ -67,6 +67,7 @@
 			</h3>
 			<ul class="menu-section-list chat-list" component="chat/list"></ul>
 		</section>
+		{{{ end }}}
 		<!-- ENDIF config.loggedIn -->
 	</nav>
 
