@@ -163,15 +163,21 @@
 							<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
 							<div class="hidden" id="search-fields">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
+									<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
 									<a href="#"><i class="fa fa-gears fa-fw advanced-search-link"></i></a>
 								</div>
 								<button type="submit" class="btn btn-default hide">[[global:search]]</button>
 							</div>
 						</form>
-						<ul id="quick-search-results" class="dropdown-menu quick-search-results hidden">
-							<!-- IMPORT partials/quick-search-results.tpl -->
-						</ul>
+						<div id="quick-search-container" class="quick-search-container hidden">
+							<div class="checkbox filter-category">
+								<label>
+									<input type="checkbox" checked><span class="name"></span>
+								</label>
+							</div>
+							<div class="text-center loading-indicator"><i class="fa fa-spinner fa-spin"></i></div>
+							<div class="quick-search-results-container"></div>
+						</div>
 					</li>
 					<li class="visible-xs" id="search-menu">
 						<a href="{relative_path}/search">
