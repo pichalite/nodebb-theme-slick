@@ -3,10 +3,12 @@
 	<div class="topic col-lg-12 col-sm-12" data-has-widget-class="topic col-lg-9 col-sm-12" data-has-widget-target="sidebar">
 
 		<h1 component="post/header" class="hidden-xs">
-			<i component="topic/pinned" class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {pinExpiryISO}]]{{{ end }}}"></i>
-			<i component="topic/locked" class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
-			<i class="pull-left fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
-			<!-- BEGIN icons -->{@value}<!-- END icons -->
+			<span component="topic/labels">
+				<i component="topic/pinned" class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {pinExpiryISO}]]{{{ end }}}"></i>
+				<i component="topic/locked" class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
+				<i class="pull-left fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
+				<!-- BEGIN icons -->{@value}<!-- END icons -->
+			</span>
 			<span class="topic-title" component="topic/title">{title}</span>
 		</h1>
 
