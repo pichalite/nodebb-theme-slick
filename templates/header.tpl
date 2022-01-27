@@ -27,7 +27,7 @@
 	<!-- END -->
 </head>
 
-<body class="{bodyClass} theme-{config.selectedSkin}">
+<body class="{bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
 	<nav id="menu" class="hidden">
 		<section class="menu-profile">
 			<!-- IF user.uid -->
