@@ -2,13 +2,16 @@
   "name": "nodebb-theme-slick",
   "version": "1.4.23",
   "nbbpm": {
-    "compatibility": "^1.18.6"
+    "compatibility": "^2.0.0"
   },
   "description": "Slick theme for NodeBB",
   "main": "theme.less",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pichalite/nodebb-theme-slick.git"
+  },
+  "dependencies": {
+    "slideout": "^1.0.1"
   },
   "keywords": [
     "nodebb",
