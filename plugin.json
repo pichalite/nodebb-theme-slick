@@ -28,13 +28,12 @@
 		}
 	],
 	"scripts": [
-		"lib/slick.js",
-		"lib/modules/slideout.min.js",
-		"lib/chats.js",
-		"lib/quickreply.js"
+		"public/slick.js"
 	],
-	"acpScripts": [
-		"lib/admin.js"
-	],
+	"modules": {
+		"../admin/plugins/slick.js": "public/admin.js",
+		"slick/quickreply.js": "public/quickreply.js",
+		"slick/chats.js": "public/chats.js"
+	},
 	"templates": "./templates"
 }
