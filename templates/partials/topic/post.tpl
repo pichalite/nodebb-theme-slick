@@ -59,7 +59,7 @@
 <div class="row post-footer">
 	<div class="col-xs-12">
 		<div class="pull-left">
-			{posts.reactions}
+			<!-- IMPORT partials/topic/reactions.tpl -->
 		</div>
 		<div class="pull-right">
 			<div class="post-tools">
