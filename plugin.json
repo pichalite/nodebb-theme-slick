@@ -21,9 +21,6 @@
 			"hook": "action:user.saveSettings", "method": "saveSettings"
 		},
 		{
-			"hook": "filter:user.getSettings", "method": "getSettings"
-		},
-		{
 			"hook": "filter:meta.getLinkTags", "method": "getLinkTags"
 		}
 	],

@@ -75,6 +75,16 @@ $(document).ready(function () {
 				});
 			}
 		});
+
+		$(window).on('action:ajaxify.start', function () {
+			if (ajaxify.data.template.name === 'account/settings' && $('[data-property="themeSlickSkin"]').val() !== config.themeSlickSkin) {
+				var newSkin = config.themeSlickSkin;
+				var classes = $('body').attr('class').split(/\s+/);
+				classes = classes.filter(c => !c.startsWith('skin-'));
+				classes.push('skin-' + newSkin);
+				$('body').attr('class', classes.join(' '));
+			}
+		});
 	}
 
 	function setupEditedByIcon() {
