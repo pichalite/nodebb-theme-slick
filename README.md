@@ -1,6 +1,5 @@
-# Slick theme for NodeBB
+# Tema de los foros vtubeando.net
 
 
-![](https://i.imgur.com/3emPDyq.png)
+![](screenshot.png)
 
-![](https://i.imgur.com/UNZ2j3u.png)   ![](https://i.imgur.com/Rl6ezMh.png)

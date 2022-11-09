@@ -1,4 +1,4 @@
-<div class="account">
+<div class="semitransparent-card account">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<!-- IMPORT partials/account/menu.tpl -->

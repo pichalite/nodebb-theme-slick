@@ -1,6 +1,6 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
-<div class="search">
+<div class="search semitransparent-card">
 	<div class="row">
 		<div class="col-xs-12">
 			<form id="advanced-search">

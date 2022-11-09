@@ -6,9 +6,9 @@
 		<div class="col-lg-6">
 			<div class="alt-logins">
                                 <h3> Opciones de inicio de sesión </h3>
-                                <button color="white" class="btn login-alt login-google" onclick="location.href='https://vtubeando.net/auth/google';"><i class="fa fa-google"></i><span>Iniciar Sesión con Google</span></button>
-                                <button color="white" class="btn login-alt login-twitter"><i class="fa fa-twitter"></i><span>Iniciar Sesión con Twitter</span></button>
-                                <button color="white" class="btn login-alt login-discord"><img src="/plugins/nodebb-theme-slick/images/Discord-Logo-White.svg"><span>Iniciar Sesión con Discord</span></button>
+                                <button color="white" class="btn login-alt login-google" onclick="location.href='https://vtubeando.net/auth/google';"><i class="fa fa-google"></i><span>Registrarse/Iniciar Sesión con Google</span></button>
+                                <button color="white" class="btn login-alt login-twitter" onclick="location.href='https://vtubeando.net/auth/twitter';"><i class="fa fa-twitter"></i><span>Registrarse/Iniciar Sesión con Twitter</span></button>
+                                <button color="white" class="btn login-alt login-discord" onclick="location.href='https://vtubeando.net/auth/discord';"><img src="/plugins/nodebb-theme-vtubeando/images/Discord-Logo-White.svg"><span>Registrarse/Iniciar Sesión con Discord</span></button>
                         <!--
 				<!-- BEGIN authentication -->
 				<div class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top" href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-3x"></i></a></div>

@@ -1,4 +1,4 @@
-<div class="tags">
+<div class="tags semitransparent-card">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<!-- IF displayTagSearch -->

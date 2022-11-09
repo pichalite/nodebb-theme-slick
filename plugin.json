@@ -1,7 +1,8 @@
 {
-	"id": "nodebb-theme-slick",
+	"id": "nodebb-theme-vtubeando",
 	"library": "./lib/theme.js",
 	"hooks": [
+		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
 		{
 			"hook": "static:app.load", "method": "init"
 		},
@@ -27,17 +28,16 @@
 			"hook": "filter:meta.getLinkTags", "method": "getLinkTags"
 		}
 	],
-	"scripts": [
-		"lib/slick.js",
-		"lib/modules/slideout.min.js",
-		"lib/chats.js",
-		"lib/quickreply.js"
-	],
-	"acpScripts": [
-		"lib/admin.js"
-	],
         "staticDirs": {
             "images": "public/images"
         },
+	"scripts": [
+		"public/slick.js"
+	],
+	"modules": {
+		"../admin/plugins/slick.js": "public/admin.js",
+		"slick/quickreply.js": "public/quickreply.js",
+		"slick/chats.js": "public/chats.js"
+	},
 	"templates": "./templates"
 }

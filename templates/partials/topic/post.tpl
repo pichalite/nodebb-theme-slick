@@ -10,7 +10,7 @@
 		<!-- IF !reputation:disabled -->
 		<div class="votes pull-right">
 			<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
-				<i class="fa fa-chevron-up"></i>
+				<i class="fa fa-heart"></i>
 			</a>
 
 			<span component="post/vote-count" data-votes="{posts.votes}">{posts.votes}</span>

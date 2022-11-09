@@ -1,32 +1,32 @@
 {
-  "name": "nodebb-theme-slick",
-  "version": "1.4.3",
+  "name": "nodebb-theme-vtubeando",
+  "version": "1.0.0",
   "nbbpm": {
     "compatibility": "^1.17.0"
   },
-  "description": "Slick theme for NodeBB",
+  "description": "Tema de los foros vtubeando.net para NodeBB",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pichalite/nodebb-theme-slick.git"
+    "url": "https://github.com/vrisalab/nodebb-theme-vtubeando"
   },
   "keywords": [
     "nodebb",
-    "slick",
+    "costum",
     "theme",
     "themes"
   ],
   "author": {
-    "name": "pichalite",
-    "email": "pichalite.com@gmail.com"
+    "name": "v_risalab",
+    "email": "v.risalab@gmail.com"
   },
   "bugs": {
-    "url": "https://github.com/pichalite/nodebb-theme-slick/issues"
+    "url": "https://github.com/vrisalab/nodebb-theme-vtubeando/issues"
   },
   "maintainers": [
     {
-      "name": "pichalite",
-      "email": "pichalite.com@gmail.com"
+        "name": "v_risalab",
+        "email": "v.risalab@gmail.com"
     }
   ]
 }

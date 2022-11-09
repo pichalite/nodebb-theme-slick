@@ -54,13 +54,14 @@
 			<div class="row">
 				<div class="<!-- IF !sso.length -->col-md-12 col-sm-12<!-- ELSE -->col-md-7 col-sm-12<!-- ENDIF !sso.length -->">
 					<form>
-
+                                                <!--
 						<div class="form-group">
 							<label class="control-label" for="inputFullname">[[user:fullname]]</label>
 							<div class="controls">
 								<input class="form-control" type="text" id="inputFullname" placeholder="[[user:fullname]]" value="{fullname}">
 							</div>
 						</div>
+                                                -->
 						<!-- IF allowWebsite -->
 						<div class="form-group">
 							<label class="control-label" for="inputWebsite">[[user:website]]</label>
@@ -70,6 +71,7 @@
 						</div>
 						<!-- ENDIF allowWebsite -->
 
+                                                <!--
 						<div class="form-group">
 							<label class="control-label" for="inputLocation">[[user:location]]</label>
 							<div class="controls">
@@ -83,6 +85,7 @@
 								<input class="form-control" id="inputBirthday" value="{birthday}" placeholder="mm/dd/yyyy">
 							</div>
 						</div>
+                                                -->
 
 						<div class="form-group">
 							<label class="control-label" for="grouptitle">[[user:grouptitle]]</label>

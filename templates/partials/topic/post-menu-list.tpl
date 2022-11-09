@@ -88,7 +88,8 @@
 	<li role="presentation" class="divider"></li>
 	<li role="presentation">
 		<a component="post/flag" role="menuitem" tabindex="-1" href="#">
-			[[topic:flag_title]]
+                        Reportar
+			<!-- [[topic:flag_title]] -->
 		</a>
 	</li>
 	<!-- ENDIF posts.display_flag_tools -->
