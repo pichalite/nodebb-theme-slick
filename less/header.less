@@ -125,7 +125,6 @@
 }
 
 .unread-count:after {
-    content: attr(data-content);
     position: absolute;
     left: 18px;
     top: 13px;
@@ -140,17 +139,28 @@
     font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.unread-count[data-content]:not([data-content=""]):not([data-content="0"]):after {
+	content: attr(data-content);
+}
+
 .header {
     .navbar-toggle {
 		.notification-icon {
 			position: absolute;
-			left: -13px;
-			top: 14px;
-
+			left: 0px;
+			top: 0px;
 			&:before {
 				display: none;
 			}
 		}
+        .chat-notification-icon {
+            position: absolute;
+			left: 0px;
+			top: 16px;
+			&:before {
+				display: none;
+			}
+        }
 	}
 }
 
@@ -162,5 +172,16 @@
 }
 
 #mobile-menu [component="notifications/icon"].unread-count:after {
+    top: -6px;
+}
+
+#mobile-menu [component="chat/icon"].unread-count:after, .slideout-menu .unread-count:after {
+	position: relative;
+	left: -6px;
+	top: -12px;
+	padding: 0 3px;
+}
+
+#mobile-menu [component="chat/icon"].unread-count:after {
     top: -6px;
 }
