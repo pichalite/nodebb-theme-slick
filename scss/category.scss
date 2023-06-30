@@ -9,12 +9,12 @@
         .header-title {
             padding-bottom: 20px;
             margin-top: 10px;
-            border-bottom: 2px solid @primary-color;
+            border-bottom: 2px solid $primary-color;
         }
     }
 
     .topic-list {
-        @media (max-width: @screen-xs-max) {
+        @media (max-width: $screen-xs-max) {
             margin-top: 15px;
         }
     }
@@ -30,18 +30,18 @@
             padding-right: 15px;
 
             .user-avatar {
-                .user-avatar(45px);
+                @include user-avatar(45px);
 
-                @media (max-width: @screen-xs-max) {
-                    .user-avatar(35px);
+                @media (max-width: $screen-xs-max) {
+                    @include user-avatar(35px);
                 }
             }
 
             .user-icon {
-                .user-icon(45px, 2em);
+                @include user-icon(45px, 2em);
 
-                @media (max-width: @screen-xs-max) {
-                    .user-icon(35px, 1.5em);
+                @media (max-width: $screen-xs-max) {
+                    @include user-icon(35px, 1.5em);
                 }
             }
         }
@@ -58,7 +58,7 @@
 
             }
 
-            @media (max-width: @screen-sm-max) {
+            @media (max-width: $screen-sm-max) {
                 font-size: 16px;
             }
 
@@ -78,7 +78,7 @@
         &.unread {
             .title {
                 a {
-                    color: @primary-color;
+                    color: $primary-color;
                 }
 
                 small {
@@ -108,16 +108,16 @@
             }
 
             .user-avatar {
-                .user-avatar(32px);
+                @include user-avatar(32px);
             }
 
             .user-icon {
-                .user-icon(32px, 1.4em);
+                @include user-icon(32px, 1.4em);
             }
 
             a {
                 display: table-row;
-                color: @primary-color;
+                color: $primary-color;
 
                 &:hover {
                     text-decoration: none;
@@ -138,7 +138,7 @@
         .category-info {
             padding: 15px 0;
 
-            @media (max-width: @screen-sm-max) {
+            @media (max-width: $screen-sm-max) {
                 padding: 10px 0;
             }
 
@@ -169,12 +169,12 @@
             font-size: 12px;
 
             .user-icon {
-                .user-icon(32px, 1.3em);
+                @include user-icon(32px, 1.3em);
                 margin-right: 10px;
             }
 
             .user-avatar {
-                .user-avatar(32px);
+                @include user-avatar(32px);
                 margin-right: 10px;
             }
         }
