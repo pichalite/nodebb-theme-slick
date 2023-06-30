@@ -28,5 +28,8 @@
         "name": "v_risalab",
         "email": "v.risalab@gmail.com"
     }
-  ]
+  ],
+    "dependencies": {
+        "bent": "^7.3.12"
+    }
 }

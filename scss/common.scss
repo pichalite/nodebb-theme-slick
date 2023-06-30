@@ -1,0 +1,181 @@
+
+body {
+	overflow-y: scroll;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+// fixes chrome font boosting :/ https://stackoverflow.com/questions/13430897/how-to-override-font-boosting-in-mobile-chrome
+body * {
+	max-height:1000000px;
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+}
+
+hr {
+	border-top-color: var(--bs-border-color);
+	opacity: 1;
+}
+
+.ff-base {
+	font-family: $font-family-base !important;
+}
+.ff-sans {
+	font-family: $font-family-sans-serif !important;
+}
+.ff-secondary {
+	font-family: $font-family-secondary;
+}
+.tracking-tight { letter-spacing: -0.02em; }
+
+.caret {
+	&::after {
+		border: none;
+		font-family: "FontAwesome";
+		content: "\f078";
+		color: tint-color($primary, 40%);
+	}
+}
+
+.placeholder-wave {
+	opacity: 0.5;
+}
+
+.bg-card-cap {
+	--bs-bg-opacity: 1;
+	background-color: $card-cap-bg!important;
+}
+
+blockquote {
+	$bq-border-color: mix($light, $dark, 75%);
+	@extend .text-bg-light;
+	font-style: normal;
+	border-left: 2px solid $bq-border-color;
+	padding: 1rem;
+	p:last-child {
+		margin-bottom: 0;
+	}
+	.toggle {
+		border-color: $bq-border-color!important;
+	}
+}
+
+body:not(.page-user) {
+	#content {
+		transition: opacity 150ms linear;
+		&.ajaxifying {
+			-moz-opacity: 0;
+			opacity: 0;
+		}
+	}
+}
+.page-user {
+	#content {
+		transition: opacity 150ms linear;
+		&.ajaxifying .account-content {
+			transition: opacity 150ms linear;
+			-moz-opacity: 0;
+			opacity: 0;
+		}
+	}
+}
+
+.sticky-tools {
+	position: sticky;
+	z-index: 3;
+	top: 0;
+	padding: 0.25rem 0;
+}
+// quartz doesn't need body-bg for tool background
+.skin-quartz .sticky-tools {
+	background-color: initial;
+}
+
+.skin-noskin {
+	.sticky-tools .btn-link {
+		color: $dark;
+	}
+}
+
+.btn-link {
+	&:hover, &.active {
+		background-color: $btn-ghost-hover-color;
+		text-decoration: none;
+	}
+}
+
+@mixin btn-ghost-base {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: ($spacer * 0.5);
+	border-radius: $border-radius-sm;
+	border-width: 1px;
+	border-color: transparent;
+	background-color: transparent;
+	padding: ($spacer * 0.25) ($spacer * 0.5);
+	text-align: left;
+	--bs-text-opacity: 1;
+	color: inherit !important;
+	font-family: $font-family-secondary;
+	cursor: pointer;
+	&:hover, &.active {
+		background-color: $btn-ghost-hover-color;
+		text-decoration: none;
+	}
+}
+
+.btn-ghost {
+	@include btn-ghost-base();
+	line-height: 1.5rem;
+	> i {
+		line-height: 1.5rem;
+	}
+}
+
+.btn-ghost-sm {
+	@include btn-ghost-base();
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	> i {
+		line-height: 1.25rem;
+	}
+}
+
+.btn-outline {
+	@include btn-ghost-base();
+	border-color: $border-color;
+}
+
+.btn-outline-sm {
+	@include btn-ghost-base();
+	border-color: $border-color;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+.flex-basis-md-200 {
+	@include media-breakpoint-up(md) {
+		flex-basis: 200px!important;
+	}
+}
+
+.markdown-highlight {
+	@extend .shadow-sm;
+	@extend .border;
+}
+
+[component="chat/message/body"], [component="post/content"] {
+	.img-fluid {
+		@extend .shadow-sm;
+		padding: $spacer * 0.5;
+		margin: $spacer * 0.5 0;
+		border: 1px solid $border-color;
+		background-color: $light;
+		border-radius: $border-radius-sm;
+		max-height: 500px;
+		width: auto;
+	}
+}

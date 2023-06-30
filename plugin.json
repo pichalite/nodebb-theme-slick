@@ -2,42 +2,17 @@
 	"id": "nodebb-theme-vtubeando",
 	"library": "./lib/theme.js",
 	"hooks": [
-		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
-		{
-			"hook": "static:app.load", "method": "init"
-		},
-		{
-			"hook": "filter:admin.header.build", "method": "addAdminNavigation"
-		},
-		{
-			"hook": "filter:config.get", "method": "getThemeConfig"
-		},
-		{
-			"hook": "filter:topic.build", "method": "addUserToTopic"
-		},
-		{
-			"hook": "filter:user.customSettings", "method": "customSettings"
-		},
-		{
-			"hook": "action:user.saveSettings", "method": "saveSettings"
-		},
-		{
-			"hook": "filter:user.getSettings", "method": "getSettings"
-		},
-		{
-			"hook": "filter:meta.getLinkTags", "method": "getLinkTags"
-		}
+		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" }
 	],
-        "staticDirs": {
-            "images": "public/images"
-        },
 	"scripts": [
-		"public/slick.js"
+		"public/client.js",
+		"../nodebb-theme-harmony/public/harmony.js"
 	],
 	"modules": {
-		"../admin/plugins/slick.js": "public/admin.js",
-		"slick/quickreply.js": "public/quickreply.js",
-		"slick/chats.js": "public/chats.js"
+            	"../admin/plugins/harmony.js": "public/admin.js",
+		"../client/account/theme.js": "public/settings.js"
 	},
-	"templates": "./templates"
+        "staticDirs": {
+            "images": "public/images"
+        }
 }

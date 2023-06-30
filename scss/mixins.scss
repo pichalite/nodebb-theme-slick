@@ -1,18 +1,187 @@
-.square-shape(@size) {
-    width: @size;
-    height: @size;
-    border-radius: 4px;
+@mixin topic-avatars() {
+	.icon .avatar, .timeline-badge {
+		z-index: 1;
+
+		line-height: calc(var(--avatar-size) - 4px);
+	}
+
+	[component="user/status"] {
+		top: 20px;
+		left: 12px;
+
+		z-index: 2;
+	}
+
+	@include media-breakpoint-up(sm) {
+		[component="user/status"] {
+			padding: 5px;
+			top: 36px;
+			left: 36px;
+		}
+	}
 }
 
-.user-avatar(@size) {
-    .square-shape(@size);
-}
+@mixin timeline-style() {
+	> [component="post"], .timeline-event, > [component="post/placeholder"] {
+		position: relative;	// for absolutely positioned pseudo-element, below
+		border: 0;
+		margin-left: 1.5rem;
+		transition: border-color 1s ease-out;
 
-.user-icon(@size, @font-size) {
-    .square-shape(@size);
-    line-height: @size;
-    text-align: center;
-    color: #fff;
-    font-size: @font-size;
-    font-weight: 700;
+		&:first-child {
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				height: 16px;
+				width: 16px;
+				background-color: $border-color;
+				border-radius: 100%;
+				transform: translate(calc(-50% - .5px), -100%);
+				transition: background-color 1s ease-out;
+			}
+
+			&.highlight:before {
+				background-color: $primary;
+			}
+		}
+
+		&:last-child {
+			padding-bottom: 2rem;
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				height: 16px;
+				width: 16px;
+				background-color: $border-color;
+				border-radius: 100%;
+				transform: translate(calc(-50% - .5px), 100%);
+				transition: background-color 1s ease-out;
+			}
+
+			&.highlight:after {
+				background-color: $primary;
+			}
+		}
+
+		> div:first-of-type {
+			margin-left: -1.5rem;
+		}
+
+		&.highlight {
+			.bookmarked {
+				opacity: 1 !important;
+			}
+		}
+
+		@include topic-avatars();
+	}
+
+	[component="topic/event"], [component="topic/necro-post"] {
+		&.timeline-event {
+			text-align: left;
+			justify-content: left;
+			font-size: 1em;
+
+			.timeline-badge {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-shrink: 0;
+
+				width: 20px;
+				height: 20px;
+				padding: 0;
+				margin-right: 1rem;
+				color: $gray-500;
+				background-color: $body-bg;
+			}
+
+			.timeline-text {
+				line-height: 32px;
+				text-transform: initial;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		> [component="post"], .timeline-event {
+			&:first-child:before, &:last-child:after {
+				display: none;
+			}
+		}
+
+		[component="post"] {
+			margin-left: initial;
+			> div:not(.content) {
+				margin-left: 0;
+			}
+		}
+
+		[component="post"]:last-child:after {
+			display: none;
+		}
+
+
+		[component="topic/event"], [component="topic/necro-post"] {
+			&.timeline-event {
+				.timeline-text {
+					line-height: 16px;
+					font-size: 0.75rem;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+		&.minimal {
+			.post-footer, .timeline-event, [component="topic/quickreply/container"], .bookmarked {
+				display: none !important;
+			}
+
+			[component="post/content"] {
+				@include line-clamp(1);
+			}
+		}
+
+		> [component="post"], .timeline-event, > [component="post/placeholder"] {
+			border-left: 2px solid $border-color;
+
+			&.highlight {
+				border-left: 2px solid $primary;
+			}
+		}
+
+		.timeline-event {
+			margin-left: 1.5rem;
+
+			[component="topic/event/delete"] {
+				visibility: hidden;
+			}
+
+			&:hover {
+				[component="topic/event/delete"] {
+					visibility: visible;
+
+					&:hover {
+						color: $danger;
+					}
+				}
+			}
+		}
+
+		[component="topic/event"], [component="topic/necro-post"] {
+			&.timeline-event .timeline-badge {
+				width: 24px;
+				height: 24px;
+				padding: 0;
+				margin-left: -0.75rem;
+				margin-right: 1.25rem;
+				border: 2px solid $border-color;
+				border-radius: 50%;
+			}
+		}
+	}
 }

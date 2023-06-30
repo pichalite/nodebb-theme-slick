@@ -1,0 +1,35 @@
+.topic .pagination-block {
+	.scroller-content {
+		min-width: 170px;
+	}
+	.scroller-container {
+		left: 10px;
+		height: 300px;
+		border-left: 2px solid $border-color;
+
+		.scroller-thumb {
+			left: -5px;
+			&:not(.active) {
+				transition: top 100ms linear;
+			}
+			cursor: grab;
+			&.active {
+				cursor: grabbing;
+			}
+		}
+
+		.unread {
+			width: 1px;
+			height: 0; // initial
+			bottom: 0;
+			background: $primary;
+			transition: $transition-base;
+			left: -1px;
+
+			.meta {
+				left: 5px;
+				font-size: 13px;
+			}
+		}
+	}
+}

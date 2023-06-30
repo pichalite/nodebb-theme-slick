@@ -1,0 +1,6 @@
+.tool-modal {
+	@include media-breakpoint-up(md) {
+		bottom: $spacer * 3;
+		right: $spacer * 4;
+	}
+}
