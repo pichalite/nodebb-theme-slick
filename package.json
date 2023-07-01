@@ -5,7 +5,7 @@
     "compatibility": "^3.0.0"
   },
   "description": "Tema de los foros vtubeando.net para NodeBB",
-  "main": "theme.scss",
+  "main": "library.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/vrisalab/nodebb-theme-vtubeando"

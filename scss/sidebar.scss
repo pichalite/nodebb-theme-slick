@@ -1,17 +1,3 @@
-.skin-noskin {
-	// only using colors when there is no bootswatch skin applied
-	nav.sidebar, .bottombar-nav {
-		color: $secondary !important;
-		background-color: $light !important;
-	}
-	.bottombar-nav {
-		.dropdown-menu {
-			color: $secondary !important;
-			background-color: $light !important;
-		}
-	}
-}
-
 .sidebar {
 	$hover-color: mix($light, $dark, 90%);
 
