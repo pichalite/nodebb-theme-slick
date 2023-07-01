@@ -1,0 +1,60 @@
+$pitch-black: #0B1118;
+
+.skin-vtubeando-light {
+        background: url("/plugins/nodebb-theme-vtubeando/images/patronfin-clarofin-500px.png");
+
+    #content {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 15px;
+    }
+}
+
+.skin-vtubeando-dark {
+    background: url("/plugins/nodebb-theme-vtubeando/images/patronfin-darkfin-500px.png");
+
+    color: #dfdfdf;
+
+    #content {
+        background: $pitch-black;
+        padding: 15px;
+    }
+
+    .tag-list {
+	.tag {
+		background-color: $light !important;
+		color: $dark !important;
+	}
+    }
+
+    .form-select{
+        background-color: $light;
+    }
+
+    .form-control{
+        background-color: $light;
+    }
+
+    .composer{
+        background-color: $pitch-black;
+
+        .resizer{
+            background: linear-gradient(transparent, $pitch-black);
+        }
+
+        .preview{
+            background-color: $pitch-black !important;
+        }
+    }
+
+    .modal-content{
+        background-color: $light;
+    }
+
+    .login{
+        background-color: $pitch-black;
+    }
+
+    .img-fluid {
+      border: 0px;
+    }
+}

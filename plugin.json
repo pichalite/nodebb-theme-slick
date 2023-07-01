@@ -1,18 +1,25 @@
 {
 	"id": "nodebb-theme-vtubeando",
-	"library": "./lib/theme.js",
 	"hooks": [
-		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" }
+		{ "hook": "static:app.load", "method": "init" },
+		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
+		{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
+		{ "hook": "filter:config.get", "method": "getThemeConfig" },
+		{ "hook": "filter:settings.get", "method": "getAdminSettings"},
+		{ "hook": "filter:user.saveSettings", "method": "saveUserSettings" },
+		{ "hook": "filter:user.profileMenu", "method": "addProfileItem" },
+		{ "hook": "filter:middleware.renderHeader", "method": "filterMiddlewareRenderHeader" },
+		{ "hook": "filter:middleware.render", "method": "removeFinalBreadcrumb" }
 	],
 	"scripts": [
-		"public/client.js",
-		"../nodebb-theme-harmony/public/harmony.js"
+		"public/vtubeando.js"
 	],
 	"modules": {
-            	"../admin/plugins/harmony.js": "public/admin.js",
+		"../admin/plugins/vtubeando.js": "public/admin.js",
 		"../client/account/theme.js": "public/settings.js"
 	},
         "staticDirs": {
             "images": "public/images"
-        }
+        },
+	"languages": "languages"
 }
